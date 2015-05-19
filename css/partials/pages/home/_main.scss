@@ -1,0 +1,92 @@
+
+
+
+
+#platformSelector {
+	overflow: hidden;
+	border-top: 1px solid $middleGrey;
+	border-bottom: 1px solid $middleGrey;
+	background: rgba(51, 51, 51, 0.9);
+	position: absolute;
+	top: 40px;
+	width: 100%;
+	z-index: 10;
+	.inner {
+		overflow: hidden;
+	}
+	a {
+		display: block;
+		float: left;
+		width: 55px;
+		height: 55px;
+		border-right: 1px solid $middleGrey;
+		text-indent: -9999px;
+		font-size: 0;
+		background-repeat: no-repeat;
+		background-size: 385px 55px;
+		
+		@extend %consoleIcons;
+
+		&.all {
+			background-position: 0 0;
+		}
+		
+		&.ps4 {
+			background-position: -55px 0;
+		}
+
+		&.wiiu {
+			background-position: -110px 0;
+		}
+
+		&.xbox360 {
+			background-position: -165px 0;
+		}
+
+		&.ps3 {
+			background-position: -220px 0;
+		}
+
+		&.i3ds {
+			background-position: -275px 0;
+		}
+
+		&.xboxOne {
+			background-position: -330px 0;
+		}
+
+		&:last-child {
+			border: none;
+		}
+	}
+}
+
+
+.homepageSlider {
+	position: relative;
+	a {
+		float: left;
+		display: block;
+		img {
+			width: 100%;
+		}
+	}
+	.indicators {
+		position: absolute;
+		bottom: 20px;
+		right: 10px;
+		span {
+			display: block;
+			float: left;
+			width: 10px;
+			height: 10px;
+			background-color: white;
+			border-radius: 30px;
+			margin-right: 10px;
+			&.current {
+				background-color: #107c10;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,20 @@
+#collectionOptionsSection {
+	margin: 0 0 15px;
+	padding-bottom: 50px;
+	font-weight: bold;
+
+	strong {
+		display: block;
+		margin: 0 0 6px;
+		@include font-size(1.2);
+	}
+
+
+
+	#deliveryOptionButtons {
+		padding: 20px 14px 10px;
+		background: $white;
+	}
+
+}
+

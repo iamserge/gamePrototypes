@@ -1,0 +1,145 @@
+#footer {
+	overflow: hidden;
+	width: 100%;
+	background: $darkGrey;
+
+	ul#breadcrumb {
+		overflow: hidden;
+		margin: 15px 10px 0;
+		padding: 0 0 15px;
+		color: $lightGrey;
+		border-bottom: 2px solid $middleGrey;
+
+		li {
+			float: left;
+			margin: 0 6px 0 0;
+			padding: 0 14px 0 0;
+			background-repeat: no-repeat;
+			background-position: right center;
+			background-size: 6px 10px;
+			@extend %breadcrumbArrow;
+			@include font-size(1.2);
+
+			&:last-child {
+				padding: 0;
+				background-image: none;
+			}
+
+			a {
+				color: $white;
+				text-decoration: none;
+			}
+		}
+	}
+
+	div {
+		overflow: hidden;
+	}
+
+	#footerButtons {
+		margin: 15px 10px 0;
+		overflow: hidden;
+		
+		a {
+			width: 45%;
+			float: left;
+			position: relative;
+			@extend %openSans;
+			@extend %primaryButton;
+			@include font-size(1.2);
+			&.login {
+				background-color: white;
+				text-align: center;
+				width: 100%;
+				border: none;
+				color: $darkGrey;
+				margin-bottom: 10px;
+				padding: 10px 0;
+			}
+			&.storeFinder {
+				background-repeat: no-repeat;
+				background-position: 90%;
+				background-size: 18px 20px;
+				@extend %storeFinderIcon;
+			}
+
+			&.rewardPoints {
+				float: right;
+				margin: 0;
+				.amount {
+					float: right;
+				}
+			}
+		}
+
+		.logOutContainer {
+		  	display: block;
+		  	color: #fff;
+		  	text-align: center;
+		  	margin-bottom: 10px;
+		  	a {
+		  		display: inline;
+				width: auto;
+				padding: 0;
+				line-height: normal;
+				float: none;
+				background: none;
+				border: none;
+		  	}
+		}
+	}
+
+	#socialIcons {
+		clear: left;
+		margin: 15px 10px 0;
+		padding: 0 0 15px;
+		border-bottom: 2px solid $middleGrey;
+
+		a {
+			display: block;
+			float: left;
+			width: 12.666666667%;
+			height: 38px;
+			margin: 0 4.666666667% 0 0;
+			text-indent: -4000px;
+			background-size: 38px 38px;
+			background-repeat: no-repeat;
+			background-position: center;
+			&.facebook { @extend %facebook; }
+			&.twitter { @extend %twitter; }
+			&.googlePlus { @extend %googlePlus; }
+			&.youTube { @extend %youTube; }
+			&.gameDigital { @extend %gameDigital; }
+			&.socialOther { @extend %socialOther; }
+			&:last-child { margin: 0; }
+		}
+	}
+
+	#footerLinks {
+		display: table;
+		width: calc(100% - 28px);
+		margin: 15px 14px 0;
+
+		a {
+			display: table-cell;
+			padding: 0 0 3px;
+			color: $white;
+			text-decoration: none;
+			text-shadow: -1px 1px 3px #222;
+			background-position: right center;
+			background-repeat: no-repeat;
+			@include font-size(1.7);
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+
+	#copyright {
+		margin: 15px 14px;
+		padding: 0 0 3px;
+		color: $lightGrey;
+		@include font-size(1.2);
+	}
+}

@@ -1,0 +1,560 @@
+section#plpHeader {
+	background-color: $darkGrey;
+	padding: 5px 8px 11px 8px;
+	color: white;
+
+	h1 {
+		font-weight: bold;
+		margin-bottom: 8px;
+		@extend %helvetica;
+		@include font-size(1.8);
+	}
+
+	.resultsCount {
+		float: left;
+		margin-top: 2px;
+	}
+
+	.layouts {
+		float: right;
+		text-align: right;
+		margin-right: 2px;
+
+		a {
+			position: relative;
+			margin-left: 13px;
+			display: inline-block;
+			width: 11px;
+			height: 11px;
+			background: $lightGrey;
+			border: 2px solid $darkGrey;
+			outline: 2px solid $lightGrey;
+			@include transition(all, 0.3s, linear);
+
+			&:after, &:before{
+				content: " ";
+				display: block;
+				position: absolute;
+				background-color: $darkGrey;
+			}
+
+			&[data-layout="horizontal"]:after, &[data-layout="stacked"]:after  {
+				height: 2px;
+				width: 100%;
+				top: 4px;
+			}
+
+			&[data-layout="stacked"]:before {
+				width: 2px;
+				height: 100%;
+				left: 5px;
+			}
+
+			&.selected {
+				background-color: white;
+				outline-color: white;
+			}
+		}
+	}
+
+	.filtersSorting {
+		float: left;
+		width: 100%;
+		margin-top: 14px;
+		position: relative;
+
+		.filterButton {
+			position: relative;
+			width: 47%;
+			background-color: $middleGrey;
+		
+			color: white;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: bold;
+			letter-spacing: 0.7px;
+			@extend %openSans;
+			@include box-sizing-box();
+
+			.count {
+				@extend %bracketed;
+			}
+
+			&.opened:after {
+				@include rotate(180);
+			}
+		}
+		.filterBy {
+			float: left;
+			padding: 13px 0 11px 11px;
+			@include transition(background-color, 0.3s, linear);
+			&:after {
+				content: " ";
+				display: block;
+				position: absolute;
+				width: 0px;
+				height: 0px;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-top: 5px solid white;
+				top: 16px;
+				right: 12px;
+				
+				@include transition(all, 0.3s, linear);			
+			}
+			&.opened {
+				
+
+				&:after {
+					border-top-color: $darkGrey;
+				}
+			}
+		}
+		.filtersContainer {
+			display: none;
+			padding: 10px;
+			border-left: 2px solid $middleGrey;
+			border-right: 2px solid $middleGrey;
+			border-bottom: 2px solid $middleGrey;
+			background: white;
+			position: absolute;
+			width: calc(100% + 3px);
+			z-index: 20;
+			left: -2px;
+			top: 36px;
+			color: $darkGrey;
+
+			@include box-sizing-box();
+
+			.buttons {
+				overflow: hidden;
+
+				a {
+					display: block;
+					width: 46%;
+					border: 1px solid $borderGrey;
+					text-decoration: none;
+					text-transform: uppercase;
+					text-align: center;
+					font-weight: bold;
+				  	background: white;
+					color: #333;
+					padding: 12px 0px;
+					@extend %openSans;
+
+					&.applyFilters {
+						float: left;
+						@include transition(background, 0.3s, linear);
+
+						&.active {
+							background-color: $purple;
+							color: white;
+							border-color: $purple;
+						}
+					}
+
+					&.clearAll {
+						float: right;
+
+						&.inactive {
+							opacity: 0.5;
+						}
+					}
+
+				}
+			}
+
+			h2 {
+				margin: 10px 0 5px 0;
+				text-transform: uppercase;
+				@include font-size(1.4);
+			}
+
+			.appliedFilters {
+				margin-bottom: 16px;
+
+				a {
+					position: relative;
+				  	background-color: $darkGrey;
+					display: inline-block;
+					padding: 10px 33px 9px 10px;
+					color: white;
+					text-decoration: none;
+					background-repeat: no-repeat;
+					background-position: calc(100% - 7px);
+					margin-top: 3px;
+					font-weight: bold;
+					text-transform: uppercase;
+					@extend %whiteCross;
+					@extend %openSans;
+
+					&.adding {
+						left: 110%;
+					}
+				}
+			}
+
+			.filters {
+				margin-top: 10px;
+
+				>ul {
+					>li {
+				 	 	
+					  	margin-bottom: 1px;
+					  	font-weight: normal;
+					  	border-top: 1px solid $veryLightGrey;
+					  	@include font-size(1.4);
+
+						h3.trigger {
+							padding: 10px 0px;
+							@extend %openSans;
+						}
+
+						ul {
+
+							li {
+								position: relative;
+								left: 0px;
+								border-top: 1px solid white;
+								padding: 10px 5px;
+								background: $veryLightGrey;
+								font-weight: bold;
+								@extend %openSans;
+
+								.count {
+									@extend %bracketed;
+								}
+
+								&.adding {
+									left: -100%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.selectWrapper {
+			float: right;
+		  	
+		  	height: 36px;
+		  	position: relative;
+			.sortBy {
+				color: white;
+				padding: 8px 20px 8px 8px;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-weight: bold;
+				letter-spacing: 0.7px;
+				background-color: $middleGrey;
+  				border: none;
+  				width: 100%;
+  				@extend %openSans;
+				@include box-sizing-box();
+				@include appearanceNone();
+				&:after {
+
+				}
+			}
+			&:after {
+				content: " ";
+				display: block;
+				width: 10px;
+				height: 6px;
+				position: absolute;
+				top: 16px;
+ 			 	right: 11px;
+				@extend %dropDownArrowWhite;
+				@include transition(all, 0.3s, linear);
+			}
+			&.opened:after {
+				@include rotate(180);
+			}
+		}
+
+		
+
+		&:after {
+			@extend %clear;
+		}
+	}
+
+	&:after {
+		@extend %clear;
+	}
+
+	&.formatsEditions {
+		background-color: white;
+		color: $darkGrey;
+		padding: 15px 8px 11px 8px;
+		@include font-size(1.4);
+		
+	}
+}
+
+section#plpMain {
+	margin-top: 10px;
+	
+	#plpProducts {
+		overflow: hidden;
+
+		.product {
+			overflow: hidden;
+			background: white;
+			margin: 5px 5px;
+			padding-bottom: 15px;
+			opacity: 1;
+			
+			@include transition(all, 0.2s, linear);
+
+			.note {
+				color: #fff;
+				text-transform: uppercase;
+				text-align: center;
+				padding: 6px 0;
+				font-weight: bold;
+				@include font-size(1.8);
+				@extend %openSans;
+
+				&.onlyAtGame {
+					background-color: $lightPurple;
+				}
+
+				&.comingSoon {
+					background-color: $purple2;
+				}
+
+				&.outOfStock {
+					background-color: $middleGrey;
+				}
+			}
+
+			.imageContainer {
+				float: left;	
+				width: 85px;
+				margin: 15px 0 0 15px;
+
+				img {
+					width: 100%;
+				}
+
+				&.outOfStock img {
+					@include grayscaleImage();
+				}
+			}
+
+			.productInfo {
+				float: left;
+				margin-left: 16px;
+				width: calc(100% - 133px);
+				margin: 15px 15px 0 15px;
+				
+				h2 {
+					margin-bottom: 6px;
+
+				}
+
+				.icons {
+					margin-bottom: 7px;
+					.pegi {
+						background-size: 100px;
+						width: 20px;
+						height: 24px;
+					}
+					.platform {
+						position: relative;
+						top: -4px;
+						margin-left: 4px;
+						@include font-size(0);
+						@extend %gameIcons;
+						&:after {
+							@include font-size(2);
+						}
+					}
+
+					.reviews {
+						position: relative;
+						float: right;
+						margin-top: 4px;
+
+						.reviewsCount {
+							@extend %bracketed;
+						}
+					}
+				}
+
+				.row {
+					padding: 10px 0;
+					border-top: 1px solid $borderGrey;
+					overflow: hidden;
+					color: $middleGrey;
+
+					.key {
+						float: left;
+					}
+
+					.value {
+						float: right;
+						color: $purple;
+					}
+					
+					.condition {
+						color: $purple;
+						font-weight: bold;
+						text-transform: uppercase;
+						@extend %openSans;
+					}
+
+					.gameLogo {
+						width: 35px;
+						height: 10px;
+						position: relative;
+	  					top: -2px;
+					}
+
+					&:first-child .value {
+						font-weight: bold;
+						line-height: 12px;
+						@include font-size(1.5);
+					}
+					&:last-child {
+						border-bottom: 1px solid $borderGrey;
+					}
+				}
+			}
+			&.clicked {
+				opacity: 0.6;
+			}
+		}
+
+		&.full {
+
+			.product {
+				padding-bottom: 10px;
+				position: relative;
+
+				.note {
+					position: absolute;
+					top: 0;
+					width: 100%;
+				}
+
+				.imageContainer {
+					float: none;
+					width: 74%;
+		 		 	margin: 40px 40px 0 40px;
+				}
+
+				.productInfo {
+					float: none;
+					width: 92%;
+	  				margin: 35px auto 0 auto;
+
+		  			.row {
+		  				padding: 6px 0;
+		  			}
+				}
+			}
+		}
+
+		&.stacked {
+			overflow: hidden;
+
+			.product {
+				width: 47.5%;
+				padding-bottom: 10px;
+				margin: 0 5px 5px 0px;
+				position: relative;
+				float: right;
+
+				.note {
+					@include font-size(1.2);
+					padding: 9px 0;
+				}
+
+				.imageContainer {
+					float: none;
+				 	margin: 0;
+				  	height: 180px;
+				  	width: 100%;
+				 	position: relative;
+				 	img {
+				 		max-width: 80%;
+						max-height: 90%;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						margin: auto;
+				 	}
+				}
+				
+				.productInfo {
+					float: none;
+					width: 92%;
+	  				margin: 10px auto 0 auto;
+	  				h2 {
+	  					height: 50px;
+	  				}
+	  				.icons .reviews {
+	  					margin-top: 5px;
+	  					font-size: 10px;
+	  					display: none;
+	  				}
+
+		  			.row {
+		  				padding: 6px 0;
+
+		  				&:first-child .key {
+	  						line-height: 12px;
+	  						width: 53%;
+		  				}
+		  			}
+				}
+
+				&:nth-child(2n + 1) {
+					float: left;
+					margin: 0 0 5px 5px;
+				}
+			}
+		}
+
+		&.scaled .product {
+			opacity: 0.6;
+			@include blur(2px);
+		}
+	}
+
+	#plpNavigation {
+		padding-bottom: 10px;
+
+		a {
+			font-weight: bold;
+			text-transform: uppercase;
+			text-decoration: none;
+			text-align: center;
+			padding: 12px 0;
+			@include font-size(1.2);
+			@extend %openSans;
+		}
+
+		a#showNextProducts {
+			display: block;
+			margin:10px 5px;
+			background-color: $lightPurple;
+			color: white;
+		}
+
+		.resultsCount {
+			text-align: center;
+			padding: 12px 0;
+		}
+
+		
+		&:after {
+			@extend %clear;
+		}
+	}
+}

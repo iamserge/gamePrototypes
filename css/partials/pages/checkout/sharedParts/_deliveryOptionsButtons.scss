@@ -1,0 +1,47 @@
+#deliveryOptionSelection {
+	margin: 0 0 15px;
+	padding: 10px 14px;
+	font-weight: bold;
+	background: $white;
+	h3.title {
+	  	margin: 5px 0 10px;
+		font-weight: bold;
+		@extend %helvetica;
+	}
+}
+
+#deliveryOptionButtons {
+	
+ 	button, a {
+		@extend %primaryButton;
+		display: inline-block;
+		width: 45%;
+		padding: 10px 30px 10px 12px;
+		background-position: 92% center;
+		background-repeat: no-repeat;
+		background-size: 20px 12px;
+		@extend %buttonDeliveryVan;
+		@include box-sizing-box();
+		&:last-child {
+			float: right;
+			margin: 0 0 0 3px;
+			background-position: 92% center;
+			background-repeat: no-repeat;
+			background-size: 18px 15px;
+			@extend %buttonCollection;
+
+			&:disabled, &.disabled {
+				@extend %buttonCollectionDisabled;
+			}
+		}
+	}
+	.orText {
+		color: $lightGrey;
+		display: inline-block;
+		width: 7%;
+		text-align: center;
+		text-transform: uppercase;
+		@extend %openSans;
+		@include font-size(1.2);
+	}
+}

@@ -1,0 +1,88 @@
+#addOns {
+	position: relative;
+	.addOn {
+		overflow: hidden;
+		top: 50%;
+		@extend %sliderItem;
+		.packShot {
+			display: block;
+			float: left;
+			width: 14.482758621%;
+			img {
+				width: 100%;
+			}
+		}
+		h3 {
+			float: left;
+			margin-left: 6px;
+			width: 81.034482759%;
+			
+			a {
+				color: $darkGrey;
+				text-decoration: none;
+				@include font-size(1.8)
+			}
+
+		}
+		.icons {
+		  	float: right;
+			margin: 9px 0 0 5px;
+			width: 84.034482759%;
+			padding:5px 0;
+			border-bottom: 1px solid $borderGrey;
+			border-top: 1px solid $borderGrey;
+			> * {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.download {
+				margin-right: 6px;
+			}
+			.condition {
+				text-transform: uppercase;
+				font-weight: bold;
+				@extend %openSans;
+			}
+
+			.console {
+				width: 73px;
+				height: 16px;
+				margin-right: 5px;
+				@include font-size(2);
+				@extend %gameIcons;
+			}
+
+			.price {
+				font-size: 18px;
+				font-weight: bold;
+				color: $purple;
+			}
+		}
+		.buttons {
+			float: left;
+			width: 100%;
+			margin-top: 16px;
+
+			a {
+				font-size: 12px;
+				background-position: calc(50% + 45px) 7px;
+				padding: 12px 32px 12px 0;
+				margin-bottom: 0;
+			}
+
+			.addToWishlist {
+				text-indent: -9999px;
+				float: left;
+				width: 20%;
+				background-position: center;
+			}
+
+			.addToBasket {
+				float: right;
+					width: 76%;
+					margin-right: 5px;
+					padding: 14px 32px 12px 0;
+			}
+		}
+	}
+}

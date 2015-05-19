@@ -1,0 +1,32 @@
+body#checkout {
+	
+	@import 'sharedParts/_shared';
+
+	//Shared page parts
+	@import 'sharedParts/_subHeader';
+	@import 'sharedParts/_deliveryOptionsButtons';	
+	@import 'sharedParts/_deliveryGroups';
+	@import 'sharedParts/_basketSummary';
+	@import 'sharedParts/_paymentCardDetails';
+	@import 'sharedParts/_giftOptions';
+	@import 'sharedParts/_giftPaymentMethod';
+	
+	//Page specific
+
+	@import '_login';
+	@import '_homeDeliveryAddressEntry';
+	@import '_manualAddressEntry';
+	@import '_homeDeliveryOptions';
+	@import '_paymentDetails';
+	@import '_yourDetails';
+	@import '_confirmation';
+	@import '_collectionOptions';
+	@import '_expressCheckout';
+
+	
+	
+
+}
+
+// Because its also used in store finder, we include styles outside of body#checkouts
+@import 'sharedParts/_collectionSection';

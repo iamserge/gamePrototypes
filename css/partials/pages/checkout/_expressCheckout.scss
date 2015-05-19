@@ -1,0 +1,258 @@
+
+.sectionsContainer  {
+	> .trigger {
+		color: white;
+		background: $darkGrey;
+		margin: 0 5px;
+		@extend %greyTitle;
+	}
+
+}
+
+#expressCheckoutHeader {
+	background-color: $darkGrey;
+	padding: 10px;
+	h1 {
+		margin: 0;
+		color: #fff;
+	}
+}
+
+#deliveryAddresses {
+	padding-bottom: 10px;
+	.addresses {
+		.address {
+			@extend %radioBox;
+			background-color: white;
+			&.selected {
+				background: $veryLightGrey;
+				border-width: 2px;
+			}
+		}
+		.moreAddresses {
+			display: none;
+			margin-top: 10px;
+		}
+	}
+	a {
+		text-align: center;
+		@extend %secondaryButton;
+	}
+	
+}
+
+#ageConfirmation {
+	padding-bottom: 10px;
+	h2 span {
+		color: $purple;
+	}
+	select {
+		width: 100%;
+		margin-top: 10px;
+	  	background-position: 96%;
+		@extend %select;
+	}
+}
+
+#giftOptions {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#paymentCards {
+	.cards{
+		.card {
+			@extend %radioBox;
+			background-color: white;
+			.row {
+				margin-bottom: 4px;
+				display: block;
+				.value {
+					float: right;
+					width: 50%;
+					font-weight: bold;
+					padding-right: 10px;
+				}
+			}
+			&.selected {
+				background: $veryLightGrey;
+				border-width: 2px;
+			
+			}
+			input {
+				width: 91px;
+			}
+		}
+		.moreCards {
+			display: none;
+			margin-top: 10px;
+		}
+		a {
+			text-align: center;
+			@extend %secondaryButton;
+		}
+	}
+	#otherPaymentMethods {
+	  	padding: 20px 0px;
+		span {
+			
+		}
+		a {
+			text-indent: -9999px;
+			display: inline-block;
+			height: 45px;
+			background-repeat: no-repeat;
+  			background-size: 100%;
+  			vertical-align: middle;
+		}
+		#usePayPal {
+		  	width: 56px;
+  			margin: 0 12px 0 12px;
+			@extend %payPalLogo;
+		}
+		#useGameWallet {
+		  	width: 195px;
+			@extend %gameWalletLogo;
+		}
+		
+	}
+}
+
+#rewardPoints {
+	p {
+		span {
+			color: $purple;
+			font-weight: bold;
+			@include font-size(1.5);
+		}
+	}
+	.buttons {
+		text-align: center;
+		padding: 14px 0;
+		a {
+			display: inline-block;
+			width: 49%;
+			text-align: center;
+			@extend %secondaryButton;
+			&.selected {
+				color: white;
+				background-color: $darkGrey;
+				border-color: $darkGrey;
+			}
+		}
+	}
+	.rewardPointsAmount {
+		display: none;
+		padding: 10px 0;
+		border-top: 1px solid $borderGrey;
+		overflow: hidden;
+		p {
+		  	width: 56%;
+		  	line-height: 16px;
+			float: left;
+		}
+		input {
+		  	float: right;
+  			width: 40%;
+		}
+		a {
+			clear: both;
+			margin-top: 10px;
+			text-align: center;
+			color: white;
+			background-color: $darkGrey;
+			border-color: $darkGrey;
+			float: left;
+			width: 100%;
+			@extend %secondaryButton;
+		}
+	}	
+}
+
+#orderSummary {
+	.basketSummary {
+		padding: 10px 0;
+		.totalOrder {
+			border-top: 1px solid $borderGrey;
+			padding-top: 10px;
+			@include font-size(2.0);
+		}
+	}
+}
+
+#billingAddress {
+	padding-bottom: 10px;
+	h2 {
+		margin-bottom: 5px;
+	}
+	.addressContainer {
+		@extend %checkboxBox;
+	}
+	#manualBillingAddress {
+		display: none;
+		label {
+			display: none;
+		}
+
+		select {
+			width: 100%;
+			margin: 10px 0;
+			@extend %select;
+			background-position: 95% center;
+		}
+
+		input[type="text"], input[type="password"]  {
+			margin: 0 0 10px;
+		}
+
+		
+	}
+
+}
+
+#payNow {
+	padding: 14px 10px 7px 10px;
+	span {
+		display: block;
+		margin-bottom: 10px;
+		a {
+			margin-top: 2px;
+			display: block;
+			font-weight: bold;
+			color: $darkGrey;
+		}
+	}
+	.button {
+		background-position: 67% center;
+		padding-right: 25px;
+		width: 100%;
+		border: none;
+		@extend %arrowWhiteRight;
+	}
+}
+
+
+/* Sub pages of express checkout, reusing a lot of styles so no need to create sepparate file */
+
+#addNewAddress {
+	padding-top: 10px;
+}
+
+#paymentCardDetails.addNewCard {
+	padding-top: 10px;
+	.cardTypes {
+		margin:10px 0;
+	}
+	input[type="submit"] {
+		
+		display: inline-block;
+		width: 100%;
+		margin: 0 0 10px 0;
+		@extend %primaryButton;
+		@extend %arrowButton;
+		&.secondary {
+			background-color: $darkGrey;
+			border-color: $darkGrey;
+		}
+	}
+}

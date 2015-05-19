@@ -1,0 +1,109 @@
+body {
+	@include transition(all, 0.5s, linear);
+	left: 0;
+	right: 0;
+}
+
+
+.slidePanel {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	z-index: 999999;
+	overflow-x: none;
+	overflow-y: auto;
+	font-size: 15px;
+	background: #333;
+	color: #fff;
+	-webkit-box-shadow: inset 0 0 5px 5px #222;
+	-moz-box-shadow: inset 0 0 5px 5px #222;
+	box-shadow: inset 0 0 5px 5px #222;
+	@include transition(all, 0.5s, linear);
+	.sidr-inner {
+		padding: 0 0 15px;
+
+		>p {
+			margin-left: 15px;
+			margin-right: 15px;
+		}
+	}
+
+	
+
+
+
+	p {
+		font-size: 13px;
+		margin: 0 0 12px;
+
+		a {
+			color:rgba(255,255,255,0.9);
+		}
+	}
+
+	ul {
+		display: block;
+		margin: 0 0 15px;
+		padding: 0;
+		border-top: 1px solid #1a1a1a;
+		border-bottom: 1px solid #4d4d4d;
+
+		li {
+			display: block;
+			margin: 0;
+			line-height: 48px;
+			border-top: 1px solid #4d4d4d;
+			border-bottom: 1px solid #1a1a1a;
+
+			a, span {
+				padding: 0 15px;
+				display: block;
+				text-decoration: none;
+				color: #fff;
+			}
+
+			&:hover, &.active, &.sidr-class-active {
+				border-top: none;
+				line-height: 49px;
+
+				a, span {
+					-webkit-box-shadow: inset 0 0 15px 3px #222;
+					-moz-box-shadow: inset 0 0 15px 3px #222;
+					box-shadow: inset 0 0 15px 3px #222;
+				}
+			}
+
+			ul {
+				display: none;
+				border-bottom: none;
+				margin: 0;
+
+				li {
+					line-height: 40px;
+					font-size: 13px;
+
+					a, span {
+						color: rgba(255,255,255,0.8);
+						padding-left: 30px;
+					}
+
+					&:last-child {
+						border-bottom: none;
+					}
+
+					&:hover, &.active, &.sidr-class-active {
+						border-top: none;
+						line-height: 41px;
+
+						>a, >span {
+							-webkit-box-shadow: inset 0 0 15px 3px #222;
+							-moz-box-shadow: inset 0 0 15px 3px #222;
+							box-shadow: inset 0 0 15px 3px #222;
+						}
+					}
+				}
+			}
+		}
+	} 
+}
+

@@ -1,0 +1,146 @@
+&.confirmation {
+
+
+	#confirmationText {
+		padding-bottom: 10px;
+		p {
+			margin-bottom: 16px;
+ 		 	line-height: 13px;
+ 		 	&:last-child {
+ 		 		margin-bottom: 10px;
+ 		 	}
+		}
+		strong {
+			font-weight: bold;
+			display: block;
+		}
+		.purple {
+			font-weight: bold;
+			color: $lightPurple;
+		}
+	}
+
+	#confirmationItems {
+
+		.items {
+			border-top: 2px solid $backgroundGrey;
+			padding: 7px 0 5px;
+			.item {
+				padding: 7px 0;
+				overflow: hidden;
+				border-bottom: 2px solid #e6e7e8;
+				>img {
+					float: left;
+					width: 41px;
+					margin-right: 10px;
+				}
+				.itemInfo {
+					width: calc(100% - 51px);
+					float: left;
+					color: $middleGrey;
+					h3 {
+						color: $darkGrey;
+						margin-bottom: 13px;
+						@include font-size(1.8);
+					}
+					>span {
+						display: block;
+					}
+					.soldAndFullfiled {
+						margin-bottom: 9px;
+						.gameLogo {
+							width: 36px;
+							vertical-align: middle;
+							position: relative;
+							top: 2px;
+						}
+					}
+					.priceInfo {
+						margin-bottom: 18px;
+						
+						strong {
+							font-weight: bold;
+							@extend %openSans;
+						}
+						.price {
+							font-weight: bold;
+							color: $lightPurple;
+							margin: 0 9px 0 6px;
+						}
+					}
+					.delivery{
+						span {
+							line-height: 18px;
+							display: block;
+						}
+					}
+					.sellerDetailsInfoLink {
+						display: block;
+						margin-top: 12px;
+						font-weight: bold;
+						color: $middleGrey;
+					}
+				}
+
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+		}
+	}
+
+	#confirmationTotals {
+		background: white;
+	  	padding: 15px 10px 3px 10px;
+  		margin: 8px 0;
+		.row {
+			margin-bottom: 7px;
+			overflow: hidden;
+			font-weight: bold;
+
+			.key {
+				float: left;
+				span {
+					font-weight: normal
+				}
+
+			}
+			.value {
+				float: right;
+				color: $lightPurple;
+				font-weight: 800;
+			}
+			&.total {
+				border-top: 2px solid #e6e7e8;
+				padding-top: 12px;
+  				margin-top: 10px;
+			 	.value{
+			 		line-height: 6px;
+					@include font-size(1.8);
+				}
+			}
+		}
+	}
+
+
+	#confirmationBeforeLeave {
+		padding-bottom: 10px;
+		>div {
+			margin-bottom: 4px;
+			@extend %checkboxBox;
+			span {
+				line-height: 14px;
+				width: 93%;
+				display: block;
+			}
+		}
+	}
+
+	#confirmationCTAs {
+		padding: 10px;
+		a {
+			@extend %primaryButton;
+			@extend %arrowButton;
+		}
+	}
+}

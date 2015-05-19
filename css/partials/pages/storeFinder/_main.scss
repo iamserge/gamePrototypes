@@ -1,0 +1,72 @@
+body#storeFinder {
+	h1 {
+		height: 45px;
+		margin: 10px 0 0;
+		padding: 0 12px;
+		line-height: 46px;
+		color: $white;
+		font-weight: bold;
+		background: $darkGrey;
+		@include font-size(1.8);
+	}
+	input[type="text"] {
+		@extend %input;
+	}
+	#collectionData  {
+		#collectionInputContainer {
+			padding-top: 0;
+		}
+		h2 {
+			border: none;
+		}
+	}
+	#shopsContainer {
+		padding: 10px 14px;
+		margin-top: 10px;
+		background: $white;
+		h2 {
+			padding: 0 0 10px 0;
+			border-bottom: 2px solid $borderGrey;
+		}
+		.shops {
+			border-collapse: collapse;
+			.shop {
+				padding: 10px 0;
+				overflow: hidden;
+				border-bottom: 1px solid $borderGrey;
+				min-height: 50px;
+				h2 {
+					border: none;
+					float: left;
+					width: 60%;
+					margin-bottom: 4px;
+					padding-bottom: 0;
+				}
+				.address {
+					width: 46%;
+					float: left;
+				}
+				.miles {
+					float: right;
+					display: block;
+				}
+				.showOnMap {
+					display: block;
+					float: right;
+					width: 50%;
+					text-align: right;
+				}
+				
+			}
+		}
+		.showMore {
+			width: 100%;
+			text-align: center;
+			margin-top: 10px;
+			background-color: $darkGrey;
+			border-color: $darkGrey;
+			@extend %primaryButton;
+		}
+		
+	}
+}

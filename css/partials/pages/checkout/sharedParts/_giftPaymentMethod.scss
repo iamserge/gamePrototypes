@@ -1,0 +1,54 @@
+.giftPaymentMethod {
+	h2.trigger {
+		&:after {
+			width: 16px;
+			height: 17px;
+			background-size: 100%;
+			margin: 0 3px;
+			@extend %giftVoucher;
+		}
+	}
+
+	&.collapsed {
+		h2.trigger:after{
+			@include rotate(0);
+		}
+	}
+	input[type="text"] {
+		margin-bottom: 10px;
+	}
+	.errorMessage[data-for="giftCardPIN"] {
+		margin-bottom: 0;
+	}
+	a {
+		display: inline-block;
+		text-decoration: none;
+		text-transform: uppercase;
+		border: 1px solid $borderGrey;
+		font-weight: bold;
+		color: $lightGreyText;
+	  	padding: 10px 34px 10px 10px;
+			float: right;
+			margin-bottom: 10px;
+		@extend %openSans;
+		@extend %tickButton;
+	}
+	::-webkit-input-placeholder {
+		font-weight: bold;
+	   	font-family: 'Open Sans Condensed', sans-serif;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+		font-weight: bold;
+	   	font-family: 'Open Sans Condensed', sans-serif;
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   	font-weight: bold;
+	   	font-family: 'Open Sans Condensed', sans-serif;
+	  
+	}
+	:-ms-input-placeholder { 
+		font-weight: bold;
+	   	font-family: 'Open Sans Condensed', sans-serif;
+	}
+}

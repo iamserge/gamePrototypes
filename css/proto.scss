@@ -1,0 +1,48 @@
+// ***************************************************** \\
+//              Setup - Variables & Mixins               \\
+// ***************************************************** \\
+@import 'partials/global/_variables';
+@import 'partials/global/_mixins';
+
+
+// ***************************************************** \\
+//     Global styles - Header, fonts, general layout     \\
+// ***************************************************** \\
+@import 'partials/global/_reset';
+@import 'partials/global/_images';
+@import 'partials/global/_fonts';
+@import 'partials/global/_gamestyle';
+@import 'partials/global/_controls';
+@import 'partials/global/_layout';
+@import 'partials/global/_header';
+@import 'partials/global/_searchPanel';
+@import 'partials/global/_errorMessages';
+@import 'partials/global/_footer';
+@import 'partials/global/_uiBlocker';
+@import 'partials/sidePanels/_base';
+@import 'partials/sidePanels/_basketPanel';
+@import 'partials/global/_rightSection';
+
+
+// ***************************************************** \\
+//                 Page specific styles                  \\
+// ***************************************************** \\
+@import 'partials/pages/home/_main';
+@import 'partials/pages/plp/_filters';
+@import 'partials/pages/plp/_main';
+@import 'partials/pages/pdp/_main';
+@import 'partials/pages/basket/_main';
+@import 'partials/pages/checkout/_main';
+@import 'partials/pages/addedToBasket/_main';
+@import 'partials/pages/wishlist/_main';
+@import 'partials/pages/myAccount/_main';
+@import 'partials/pages/storeFinder/_main';
+@import 'partials/pages/sellerDetails/_main';
+
+
+// ***************************************************** \\
+//                    Shared sections                    \\
+// ***************************************************** \\
+@import 'partials/pages/shared/_productRecs';
+@import 'partials/pages/shared/_addOns';
+@import 'partials/pages/shared/_enterAddressSection';

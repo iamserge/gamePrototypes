@@ -1,0 +1,73 @@
+#paymentCardDetails {
+	padding-bottom: 10px;
+	h2 {
+		margin-bottom: 5px;
+	}
+	select {
+		width: 100%;
+		background-position: 94% center;
+		&.small {
+			width: 46.551724138%
+		}
+	}
+	input[type="text"] {
+		font-weight: normal;
+		margin-bottom: 8px;
+	}
+	.cardTypeContainer {
+		.cardTypes {
+			width: 290px;
+			margin-top: 8px;
+		}
+	}
+	.alternativePaymentMethods {
+		display: block;
+		margin-bottom: 16px;
+		a {
+			position: relative;
+			top: 10px;
+			margin: 0 5px;
+			display: inline-block;
+			height: 28px;
+			background-size: 100%;
+			&.payPal {
+				width: 41px;
+				@extend %payPalLogo;
+			}
+			&.gameWallet {
+				width: 141px;
+				@extend %gameWalletLogo;
+			}
+		}
+	}
+
+	.expiryDateContainer {
+		margin: 10px 0;
+		overflow: hidden;
+		position: relative;
+		label {
+			display: block;
+			margin-bottom: 8px;
+			&:after {
+				content: "*";
+				color: $lightPurple;
+			}
+		}
+		select {
+			width:100%;
+
+		}
+		>div {
+			width: 46.55172%;
+			&.expiryMonthContainer {
+				float: left;
+			}
+			&.expiryYearContainer {
+				float: right;
+			}
+		}
+		.errorMessage {
+			margin-top: 10px;
+		}
+	}
+}

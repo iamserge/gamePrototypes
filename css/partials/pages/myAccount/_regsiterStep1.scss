@@ -1,0 +1,26 @@
+#registerStep1Details {
+	h1 {
+		background: none;
+		color: $darkGrey;
+		padding: 0;
+		height: auto;
+		line-height: normal;
+		margin: 0 0 10px 0;
+	}
+	form {
+		display: none;
+		margin-top: 30px;
+		&.current {
+			display: block;
+		}
+	}
+	.rewardCardGraphicsPlaceholder {
+	  	width: 100%;
+  		background: #BB80B7;
+  		height: 162px;
+  		color: black;
+  		text-align: center;
+  		line-height: 162px;
+  		margin: 10px 0 20px 0;
+	}
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>GAME Mobile - Checkout Step 1 Prototype</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="/webapp/wcs/stores/SafeStorefrontAssetStore/mobileV2/Prototypes/css/proto.css">
+
+		<script type="text/javascript">
+			var Game = Game || {};
+			Game.CurrentPage = {
+				PageName: 'checkoutStep1',
+				StoreText:  {
+					EmailAddressInvalidError: 'Please enter a valid email address',
+					EmailAddressNotRecognisedError: 'Email address not recognised, please re-enter carefully',
+					PasswordIncorrectError: 'Password incorrect, please re-enter carefully'
+				}
+			}
+		</script>
+		
+	</head>
+
+	<body id="checkout">
+
+		<%@include file="Header.jsp" %>
+
+		<main>
+
+			<section id="subHeader">
+
+				<h1>Log in</h1>
+
+			</section>
+
+			<section id="loginDetailsEntry" class="mainSection">
+			
+				<fieldset>
+
+					<legend>Insert your email to continue. We will only use this email to keep you up to date with your order:</legend>
+
+					<input type="email" name="emailAddress" data-validate="true" placeholder="Your email address" class="required"/>
+					
+
+					<div data-bind="visible: !PasswordFieldOpen()">
+
+						<button data-bind="click: HandleNewToGameClick">New to GAME</button>
+						<span class="orText">OR</span>
+						<button data-bind="click: HandleExistingCustomerClick">Existing customer</button>
+
+					</div>
+
+					<div data-bind="visible: PasswordFieldOpen()" style="display: none" id="passwordEntry">
+
+						Welcome back, please enter your password to continue
+
+						<input type="password" name="userPassword" placeholder="Your password" class="required" data-validate="true" />
+
+						<button data-bind="click: HandleLoginClick">Continue to express checkout</button>
+
+					</div>
+
+				</fieldset>
+
+			</section>
+
+		</main>
+
+		<%@include file="CheckoutFooter.jsp" %>
+		<%@include file="SidePanels.jsp" %>
+
+		<script data-main="/webapp/wcs/stores/SafeStorefrontAssetStore/mobileV2/Prototypes/js/modules/main.js" src="/webapp/wcs/stores/SafeStorefrontAssetStore/mobileV2/Prototypes/js/lib/require.js"></script>
+
+	</body>
+
+</html>

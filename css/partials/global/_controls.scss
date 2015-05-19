@@ -1,0 +1,187 @@
+%input {
+	padding: 7px;
+	font-weight: bold;
+	color: $middleGrey;
+	line-height: 20px;
+	border: 1px solid $backgroundGrey;
+	box-shadow: inset 0 0 8px 4px $veryLightGrey;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	@include box-sizing-box();
+	@include font-size(1.3);
+	&::-webkit-input-placeholder {
+		font-weight: normal;
+		color: $lightGreyText;
+	}
+	&:-moz-placeholder { 
+	  	font-weight: normal;
+		color: $lightGreyText;
+	}
+	&::-moz-placeholder { 
+		font-weight: normal;
+		color: $lightGreyText;
+	}
+	&:-ms-input-placeholder {
+		font-weight: normal;
+		color: $lightGreyText;
+	}
+	&.required {
+		&::-webkit-input-placeholder {
+		   &:before {
+		   		content: "* ";
+		   		color: $lightPurple;
+		   }
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+		   &:before {
+		   		content: "* ";
+		   		color: $lightPurple;
+		   }
+		}
+		&::-moz-placeholder { 
+		    &:before {
+		   		content: "* ";
+		   		color: $lightPurple;
+		   }
+		  
+		}
+		&:-ms-input-placeholder {  
+		   &:before {
+		   		content: "* ";
+		   		color: $lightPurple;
+		   }
+		}
+	}
+}
+
+%select {
+	@extend %input;
+	position: relative;
+	margin: 0;
+	height: auto;
+	padding: 9px 25px 9px 4px;
+	line-height: 12px;
+	border: 1px solid $backgroundGrey;
+	background-repeat: no-repeat;
+	background-position: 88% center;
+	background-size: 10px 6px;
+	@include font-size(1.2);
+	@extend %dropdownArrow;
+}
+
+%primaryButton {
+	display: block;
+	padding: 12px 12px 10px;
+	text-transform: uppercase;
+	color: $white;
+	font-weight: bold;
+	text-align: left;
+	text-decoration: none;
+	border: 1px solid $purple;
+	background-color: $purple;
+	@include font-size(1.2);
+	@extend %openSans;
+	@include box-sizing-box();
+	&:disabled, &.disabled {
+		background: $white;
+		pointer-events: none;
+		color: $purple;
+	}
+}
+
+%secondaryButton {
+	@extend %primaryButton;
+	color: $lightGrey;
+	border: 1px solid $backgroundGrey;
+	background-color: $white;
+}
+
+%arrowButton {
+	background-repeat: no-repeat;
+	background-size: 6px 10px;
+	background-position: 92% center;
+	@extend %buttonArrow;
+}
+
+%tickButton {
+	padding-right: 45px;
+	background-repeat: no-repeat;
+	background-size: 15px 12px;
+	background-position: 88% center;
+	@extend %buttonTick;
+}
+
+%checkboxBox {
+	overflow: hidden;
+	border: 1px solid $backgroundGrey;
+	background: #e3e3e3;
+	padding: 13px 10px 10px;
+	input {
+		float: left;
+		margin: 0;
+	}
+	label {
+	  	float: left;
+		width: 81%;
+		line-height: 14px;
+		margin-left: 11px;
+		strong {
+			font-weight: bold;
+		}
+	}
+}
+::-webkit-input-placeholder {
+   color: $middleGrey;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $middleGrey;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $middleGrey; 
+  
+}
+
+:-ms-input-placeholder {  
+   color: $middleGrey;  
+}
+
+%borderedButton {
+	border: 1px solid $borderGrey;
+	background-color: white;
+	color: $lightGreyText;
+}
+%radioBox {
+	position: relative;
+	margin: 0 0 2px;
+  	padding: 13px 0 11px 30px;
+	color: $middleGrey;
+	border: 1px solid $backgroundGrey;
+	background: $veryLightGrey;
+	@include font-size(1.4);
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: calc(50% - 4px);
+		left: 10px;
+		width: 8px;
+		height: 8px;
+		border: 1px solid $middleGrey;
+		border-radius: 5px;
+		background: $white;
+	}
+
+	&.selected:before {
+		background: $lightGrey;
+	}
+}
+.inputInfo {
+	display: block;
+	color: $lightGrey;
+	margin-top: 8px;
+	font-weight: normal;
+}

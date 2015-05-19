@@ -1,0 +1,240 @@
+#addedToBasket {
+	color: $darkGrey;
+	background: $backgroundGrey;
+	min-height: 100%;
+
+	section {
+		margin: 8px 5px;
+
+		h2.trigger {
+			overflow: hidden;
+		  	padding: 10px 0 9px 10px;
+			text-transform: uppercase;
+			border-bottom: 2px solid $backgroundGrey;
+			@include font-size(1.8);
+			@include greyGradient();
+		}
+	}
+
+	h1 {
+		padding: 15px;
+		background: $darkGrey;
+		color: white;
+		text-align: center;
+		@include font-size(1.8);
+	}
+
+	#addedToBasketItem {
+		overflow: hidden;
+		padding: 10px;
+		background: white;
+
+		img {
+			width: 60px;
+			float: left;
+			margin-right: 10px;
+		}
+
+		.itemInfo {
+			float: left;
+			width: calc(100% - 70px);
+
+			h2 {
+				margin-bottom: 5px;
+				@include font-size(1.8)
+			}
+
+			.icon {
+				width: 77px;
+				height: 17px;
+				margin: 4px 0;
+				font-size: 0;
+				@extend %gameIcons;
+				&:after {
+					@include font-size(2.1);
+				}
+			}
+
+			.price {
+				float: right;
+				font-weight: bold;
+				color: $purple;
+
+				@include font-size(2.5);
+				@extend %openSans;
+			}
+		}
+
+	}
+
+	#addedToBasketActions {
+		background: white;
+		padding: 5px;
+
+		.orderSubtotal {
+			display: inline-block;
+			width: 100%;
+			margin: 10px 0 14px 0;
+			text-align: center;
+
+			.amount {
+				font-weight: bold;
+			}
+
+			.itemsAmount {
+				font-weight: bold;
+				@extend %bracketed;
+			}
+
+			&.buttonsFixed {
+				margin-bottom: 71px;
+			}
+		}
+
+		.buttons {
+			overflow: hidden;
+			@include transition(all, 0.3s, linear);
+
+			&.fixed {
+				position: fixed;
+				padding: 4px 5px 1px;
+				background: white;
+				top: 41px;
+				width: 100%;
+				left: 0;
+				z-index: 20;
+				@include box-shadow(0px, 2px, 10px, rgba(0,0,0,0.2));
+				@include box-sizing-box();
+			}
+		}
+
+		a {
+			margin-bottom: 5px;
+			background-repeat: no-repeat;
+			background-size: 10px;
+			width: 48%;
+			padding: 9px 28px;
+			line-height: 16px;
+			@include font-size(1.4);
+
+			&.checkout {
+				background-position: calc(100% - 15px);
+				float: right;
+				background-color: $darkGrey;
+				@extend %arrowWhiteRight;
+			}
+
+			&.back {
+				border: 1px solid $borderGrey;
+				color: $darkGrey;
+				background-color: white;
+				background-position: 15px center;
+				float: left;
+				@extend %arrowBlackLeft;
+			}
+		}
+	}
+
+	#addedToBasketExtras .content {
+		h2 {
+
+		}
+
+		>div {
+			background: white;
+		}
+
+		.discCare {
+			line-height: 15px;
+			padding-bottom: 10px;
+			@include font-size(1.2);
+
+			h3 {
+				border-bottom: 1px solid $borderGrey;
+				padding: 12px 0 11px 0;
+				margin: 0 10px 5px 10px;
+				@include font-size(1.8);
+
+				.price {
+					float: right;
+					color: $purple;
+				}
+			}
+
+			p {
+				padding: 4px 10px 1px 10px;
+				margin-bottom: 0;
+				@include font-size(1.2);
+			}
+
+			.steps {
+				margin:0 10px;
+				padding-bottom: 12px;
+
+				.step {
+					padding: 10px 0px 3px 37px;
+					background-repeat: no-repeat;
+					background-position: left 14px;
+					
+					span {
+						display: block;
+						font-weight: bold;
+						margin-bottom: 2px;
+					}
+
+					&.step1 {
+						@extend %discCareStep1;
+					}
+
+					&.step2 {
+						background-position: 5px 14px;
+						@extend %discCareStep2;
+					}
+				}
+			}
+
+			.button.addToBasket {
+			  	margin: 0 10px;
+		 	 	padding: 14px 24px 12px 0;
+			  	background-position: calc(100% - 53px);
+			  	@include font-size(1.2);
+			}
+		}
+
+		.warranties {
+			margin:5px 0;
+
+			h3 {
+				padding: 11px 0 7px 0;
+				margin: 0 10px 5px 10px;
+				@include font-size(1.8);
+			}
+
+			.warranty {
+				border-top: 1px solid $borderGrey;
+				padding: 13px 0;
+				background-repeat: no-repeat;
+				background-position: 0 9px;
+				margin: 0 10px;
+				@extend %warrantyLogo;
+
+				h4 {
+					margin: 0 0 5px 58px;
+				}
+
+				select {
+			  	  	width: calc(100% - 57px);
+					padding: 4px;
+					margin: 0 0 10px 58px;
+				}
+				
+				.button.addToBasket {
+				  	margin: 2px 0 10px;
+			 	 	padding: 14px 24px 12px 0;
+				  	background-position: calc(100% - 53px);
+				  	@include font-size(1.2);
+				}
+			}
+		}
+	}
+}

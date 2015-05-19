@@ -1,0 +1,207 @@
+
+
+#collectionData {
+	padding: 0px 14px;
+	background: $white;
+
+	h2 {
+		padding: 10px 0;
+		border-top: 2px solid $backgroundGrey;
+	}
+
+	#collectionInputContainer {
+		padding: 10px 0;
+	}
+
+	input[type="text"] {
+		margin-bottom: 10px;
+		width: 100%;
+	}
+
+	.orText {
+		color: $darkGrey;
+		display: block;
+		padding: 10px 0;
+		width: 100%;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;
+		@extend %openSans;
+		@include font-size(1.2);
+	}
+	.errorMessage {
+		display: block;
+	}
+	button {
+		width: 100%;
+		text-align: center;
+		@extend %primaryButton;
+
+		&.shareLocation {
+			background-color: $darkGrey;
+			border-color: $darkGrey;
+		}
+	}
+}
+#userLocationContainer {
+	padding: 10px 0;
+	#userLocationMap {
+		width: 100%;
+		height: 100px;
+		margin: 10px 0;
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		color: $darkGrey;
+		@include font-size(1.6);
+
+		span {
+			color: $purple;
+			font-weight: bold;
+			@include font-size(2.0);
+			@extend %openSans;
+		}
+		strong {
+			float: right;
+			margin-top: 5px;
+			@include font-size(1.4);
+		}
+	}
+}
+
+#collectionOptions {
+	
+	margin-top: 10px;
+	background: $white;
+	h2 {
+		padding: 10px;
+		border-bottom: 2px solid $borderGrey;
+		@extend %greyTitle;
+	}
+	.rows {
+		padding: 0px 14px 0px 14px;
+		.row {
+			overflow: hidden;
+			padding: 16px 0 16px 25%;
+
+			background-repeat: no-repeat;
+			background-position: left;
+			background-size: 55px;
+
+			span {
+				display: inline-block;
+				width: 73%;
+
+				&.price {
+					font-weight: bold;
+					color: $purple;
+					width: 15%;
+					float: right;
+				}
+			}
+
+			&.game{
+				@extend %logoSmall;
+			}
+
+			&.collectPlus {
+				border-top: 1px solid $borderGrey;
+				
+				@extend %collectionPlus;
+
+			}
+
+		}
+	}
+}
+
+
+#collectionPoints {
+	padding: 10px 14px;
+	margin-top: 10px;
+	background: $white;
+	h2 {
+		padding: 0 0 10px 0;
+		border-bottom: 2px solid $borderGrey;
+	}
+	.points {
+		border-collapse: collapse;
+		.point {
+			padding: 10px 0;
+			overflow: hidden;
+			
+			border-bottom: 1px solid $borderGrey;
+			display: table-row;
+			min-height: 50px;
+			>* {
+				display: table-cell;
+				vertical-align:middle;
+				padding: 10px 0;
+			}
+			.inputContainer {
+				background-repeat: no-repeat;
+				background-position: 30px;
+				background-size: 55px;
+			}
+			.address {
+				margin-left: 70px;
+				width: 46%;
+				padding-right: 10px;
+			}
+			.miles {
+				text-align: right;
+				width: 20%;
+			}
+			&.game {
+				.inputContainer {
+					@extend %logoSmall;
+				}
+				
+			}
+			&.collectionPlus {
+				.inputContainer {
+					@extend %collectionPlus;
+				}
+				
+			}
+			&.selected {
+				background-color: $veryLightGrey;
+			}
+		}
+	}
+	.showMore {
+		width: 100%;
+		text-align: center;
+		margin-top: 10px;
+		background-color: $darkGrey;
+		border-color: $darkGrey;
+		@extend %primaryButton;
+	}
+	#collectionPointDetails {
+		overflow: hidden;
+		display: none;
+		padding: 0px 10px 20px 10px;
+		border-bottom: 1px solid $borderGrey;
+		h3 {
+			float: left;
+			width: 100%;
+			padding: 10px 0;
+			@include font-size(1.4)
+		}
+		#collectionPointMap {
+			width: calc(100% - 100px);
+			height: 100px;
+			float: left;
+		}
+		.times {
+			float: right;
+			text-align: right;
+			font-weight: normal;
+			span {
+				margin-bottom: 3px;
+				display: block;
+			}
+		}
+	}
+}

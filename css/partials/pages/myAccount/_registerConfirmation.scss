@@ -1,0 +1,58 @@
+#registerConfirmation {
+	h1 {
+		background: none;
+		color: $darkGrey;
+		padding: 0;
+		height: auto;
+		line-height: normal;
+		margin: 0 0 10px 0;
+	}
+	p {
+		font-weight: normal;
+		margin-bottom: 10px;
+		@include font-size(1.4);
+		span {
+			font-weight: bold;
+			color: $purple
+		}
+	}
+
+	#newRewardCardNumber {
+		margin: 20px 0;
+		padding: 20px 0;
+		border-top: 1px solid $borderGrey;
+		border-bottom: 1px solid $borderGrey;
+		text-align: center;
+		span {
+		  	background: $lightPurple;
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 16px 0;
+			margin: 10px 0;
+			@include font-size(2.2);
+			@extend %openSans;
+		}
+	}
+
+
+	#gameAppInfo {
+
+		h2 {
+			margin-bottom: 10px;
+		}
+		.gameAppGraphicsPlaceholder {
+			width: 100%;
+	  		background: #BB80B7;
+	  		height: 162px;
+	  		color: black;
+	  		text-align: center;
+	  		line-height: 162px;
+	  		margin: 10px 0 20px 0;
+		}
+		p.note {
+			padding-top:10px;
+			border-top: 1px solid $borderGrey;
+		}
+	}
+}

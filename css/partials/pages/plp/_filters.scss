@@ -1,0 +1,119 @@
+#plpFilters {
+	overflow: hidden;
+	padding: 10px;
+	color: $white;
+	background-color: $darkGrey;
+
+	.filterBox {
+		width: calc(50% - 6px);
+		float: left;
+
+		span {
+			display: block;
+			padding: 10px;
+			color: $lightGrey;
+			font-weight: bold;
+			background-color: $middleGrey;
+			@include font-size(1.4);
+		}
+
+		.dropdown {
+			color: $darkGrey;
+			background-color: $white;
+			background-size: 22px 14px;
+			background-position: 95% 12px;
+			background-repeat: no-repeat;
+			@include font-size(1.6);
+			@extend %dropdownArrow;
+		}
+
+		.showSelected {
+			font-style: italic;
+		}
+
+		&:first-child {
+			margin: 0 12px 0 0;
+		}
+	}
+
+	.resultsFound {
+		float: left;
+		margin: 35px 0 0;
+		font-weight: bold;
+		@include font-size(1.5);
+	}
+
+	.viewSelector {
+		float: right;
+		margin: 10px 0 0;
+
+		a {
+			position: relative;
+			display: inline-block;
+			width: 33px;
+			height: 33px;
+			margin: 0 0 0 7px;
+			text-indent: -4000px;
+			border: 4px solid $white;
+			background-color: $grey;
+
+			&.boxed {
+
+				&:before, &:after {
+					content: "";
+					position: absolute;
+					background-color: $white;
+				}
+				
+				&:before {
+					top: 15px;
+					left: 0;
+					width: 33px;
+					height: 4px;
+				}
+
+				&:after {
+					top: 0;
+					left: 14px;
+					width: 4px;
+					height: 33px;
+				}
+			}
+
+			&.stacked:after {
+				content: "";
+				position: absolute;
+				top: 15px;
+				left: 0;
+				width: 33px;
+				height: 4px;
+				background-color: $white;
+			}
+		}
+	}
+}
+
+main {
+
+	&.viewBoxed {
+		
+		.viewSelector a.boxed {
+			box-shadow: 0 0 7px 3px #6c92ff;
+		}
+	}
+
+	&.viewStacked {
+		
+		.viewSelector a.stacked {
+			box-shadow: 0 0 7px 3px #6c92ff;
+		}
+		
+	}
+
+	&.viewFull {
+		
+		.viewSelector a.full {
+			box-shadow: 0 0 7px 3px #6c92ff;
+		}
+	}
+}

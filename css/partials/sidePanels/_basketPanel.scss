@@ -1,0 +1,115 @@
+.basketItemsList {
+	@extend %helvetica;
+	.basketItem {
+		display: block;
+		overflow: hidden;
+		text-decoration: none;
+		color: $darkGrey;
+		padding: 10px 15px;
+		border-top: 1px solid $lightGrey;
+		@include box-shadow(0px, 2px, 8px, rgba(0,0,0,0.2), inset);
+		img {
+			float: left;
+			width: 28%;
+		}
+		span {
+			display: block;
+		}
+		.details {
+			float: right;
+			width: 70%;
+			height: 83px;
+			position: relative;
+			.title {
+				margin-top: 12px;
+			}
+			.price {
+				@include font-size(3);
+				text-align: right;
+				position: absolute;
+				bottom: 6px;
+				font-weight: bold;
+				left: 0;
+				.pennies {
+					display: inline;
+					@include font-size(1.2);
+				}
+			}
+			&:after {
+				content: "2";
+				font-family: "gameicons2014";
+				position: absolute;
+				bottom: 9px;
+				right: 0px;
+				@include font-size(2.5);
+			}
+			
+		}
+	}
+}
+
+#basketPanel {
+	background-color: #fff;
+	background-position: 5%;
+	@include box-shadow(0,0,0,rgba(0,0,0,0));
+	.basketHead {
+		height: 50px;
+		padding: 0 15px;
+		overflow: hidden;
+		background-color: #982690;
+		border-left: 1px solid $purple2;
+		h2 {
+			color: #fff;
+			background: $purple;
+			font-weight: bold;
+			
+			margin: 13px 0 0 0;
+			float: left;
+			padding: 0;
+			@include box-shadow(0px, 0px, 0px, rgba(0,0,0,0));
+			@include font-size();
+
+
+		}
+		.basketAmount {
+			float: right;
+			text-align: center;
+			color: #FBFBFB;
+			vertical-align: middle;
+			margin: 9px 0 0 0;
+			font-weight: bold;
+			@extend %myriad;
+			.totalAmount {
+				@include font-size(3.5);
+				.pennies {
+					font-size: 11px;
+				}
+			}
+		}
+	}
+	
+	.checkoutButton {
+		display: block;
+		padding: 17px 0;
+		background-color: $darkGrey;
+		text-decoration: none;
+		color: #fff;
+		text-align: center;
+		
+		font-weight: bold;
+		font-size: 18px;
+
+		background-position: 70%;
+		background-repeat: no-repeat;
+		@extend %myriad;
+		@extend %arrowRight;
+	}
+
+	&.loading{
+		background-repeat: no-repeat;
+		background-position: 5%;
+		background-image:url('../img/loader.gif');
+		
+
+	}
+}

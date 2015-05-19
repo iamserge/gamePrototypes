@@ -1,0 +1,22 @@
+#registerStep2Details {
+	h1 {
+		background: none;
+		color: $darkGrey;
+		padding: 0;
+		height: auto;
+		line-height: normal;
+		margin: 0;
+	}
+	h2 {
+		margin-top: 16px;
+	}
+	fieldset {
+		max-height: 0px;
+		overflow: hidden;
+		@include transition(max-height, .5s, ease-out);
+		&.current {
+			max-height: 1000px;
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,93 @@
+
+
+{ "products": [
+			{
+				"Url" : "/webapp/wcs/stores/servlet/m/PdpPrototypeView?msg=&storeId=10151&langId=44#",
+				"Note" : {
+					"Type": "onlyAtGame",
+					"Text": "Only at Game"
+				},
+				"Packshot": "/webapp/wcs/stores/SafeStorefrontAssetStore/mobileV2/Prototypes/sampleimages/packShot2.png",
+				"Title": "Call of Duty",
+				"PegiRating": "18",
+				"Console": "xboxOne",
+				"ReviewsCount": "2",
+				"Conditions": [
+					{
+						"Text": "<span class='condition'>New</span> Sold by <span class='name gameLogo small'>GAME</span>",
+						"Price": "12.99"
+					},
+
+					{
+						"Text": "Preowned from",
+						"Price": "33.99"
+					}
+				]
+			},
+			{
+				"Url" : "/webapp/wcs/stores/servlet/m/PdpPrototypeView?msg=&storeId=10151&langId=44#",
+				"Note" : {
+					"Type": "comingSoon",
+					"Text": "Coming Soon"
+				},
+				"Packshot": "/webapp/wcs/stores/SafeStorefrontAssetStore/mobileV2/Prototypes/sampleimages/packShot2.png",
+				"Title": "Call of Duty",
+				"PegiRating": "18",
+				"Console": "xboxOne",
+				"ReviewsCount": "2",
+				"Conditions": [
+					{
+						"Text": "<span class='condition'>New</span> Sold by <span class='name gameLogo small'>GAME</span>",
+						"Price": "12.99"
+					},
+
+					{
+						"Text": "Preowned from",
+						"Price": "33.99"
+					}
+				]
+			},
+			{
+				"Url" : "/webapp/wcs/stores/servlet/m/PdpPrototypeView?msg=&storeId=10151&langId=44#",
+				"Note" : {
+					"Type": "outOfStock",
+					"Text": "Out of stock"
+				},
+				"Packshot": "/webapp/wcs/stores/SafeStorefrontAssetStore/mobileV2/Prototypes/sampleimages/packShot2.png",
+				"Title": "Call of Duty",
+				"PegiRating": "18",
+				"Console": "xboxOne",
+				"ReviewsCount": "2",
+				"Conditions": [
+					{
+						"Text": "<span class='condition'>New</span> Sold by <span class='name gameLogo small'>GAME</span>",
+						"Price": "12.99"
+					},
+
+					{
+						"Text": "Preowned from",
+						"Price": "33.99"
+					}
+				]
+			},
+			{
+				"Url" : "/webapp/wcs/stores/servlet/m/PdpPrototypeView?msg=&storeId=10151&langId=44#",
+				"Packshot": "/webapp/wcs/stores/SafeStorefrontAssetStore/mobileV2/Prototypes/sampleimages/packShot2.png",
+				"Title": "Call of Duty",
+				"PegiRating": "18",
+				"Console": "xboxOne",
+				"ReviewsCount": "2",
+				"Conditions": [
+					{
+						"Text": "<span class='condition'>New</span> Sold by <span class='name gameLogo small'>GAME</span>",
+						"Price": "12.99"
+					},
+
+					{
+						"Text": "Preowned from",
+						"Price": "33.99"
+					}
+				]
+			}
+	]
+}

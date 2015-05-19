@@ -1,0 +1,12 @@
+section#rightSection {
+	position: absolute;
+	width:100%;
+	top: 0;
+	left: 100%;
+	padding-top: 45px;
+	
+	@include transition(left, 0.3s, linear);
+	&.shown {
+		left: 0;
+	}
+}

@@ -1,0 +1,834 @@
+#pdp {
+
+	main section {
+		margin: 8px 5px;
+		background: white;
+
+		p {
+			@include font-size(1.2);
+			line-height: 18px;
+
+		}
+	}
+
+	 main section h2, .greyTitle {
+		@extend %greyTitle;
+	}
+	
+	section#pdpHeader {
+		border:none;
+		margin: 0;
+		padding: 9px 0 14px 0;
+		background: $darkGrey;
+		text-align: center;
+		color: white;
+		span, a {
+			display: inline-block;
+			margin-right: 7px;
+		}
+		.console {
+			font-size: 0;
+			margin-right: 3px;
+			position: relative;
+			top: 3px;
+			left: -4px;
+			@extend %gameIcons;
+			&:after {
+				@include font-size(2.1);
+			}
+		}
+		a {
+			padding-right: 12px;
+			background-repeat: no-repeat;
+			background-position: right;
+			color: white;
+			line-height: 5px;
+			@extend %whiteSmallArrow;
+			&.reviews {
+				background: none;
+				margin-right: 0;
+				.reviewsCount {
+					margin-right: 0;
+					@extend %bracketed;
+				}
+				
+
+			}
+
+		}	
+	}
+
+	section#pdpSlider {
+		overflow: hidden;
+		position: relative;
+		margin: 0;
+
+		.slides {
+
+			overflow: hidden;
+			@include transition(transform, 0.5s, ease-out);
+			@include translate(0, 0);
+			.slide {
+				width: 100%;
+				float: left;
+				position: relative;
+				@include translate(0, 0);
+				img, iframe {
+					display: block;
+					position: absolute;
+					margin: auto;
+					width: 100%;
+					top: 0;
+					bottom: 0;
+
+				}
+				&.packshot {
+					position: relative;
+					img {
+						height: 90%;
+						width: auto;
+						left: 0;
+						right: 0;
+					}
+				}
+				&.youtube {
+					
+					&:after {
+						content:" ";
+						background-size: 100%;
+						width: 30px;
+						height: 30px;
+						position: absolute;
+						display: block;
+						left: 50%;
+						top: 50%;
+						margin: -15px 0 0 -15px;
+						z-index: 10;
+						@extend %playIcon;
+					}
+					&.active {
+						&:after {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		.indicators {
+			
+			overflow: hidden;
+			text-align: center;
+			padding: 10px 0;
+			border-top: 1px solid #999;
+			width: 100%;
+			background: white;
+			.indicator {
+				background: $lightGrey;
+				width: 25px;
+				height: 20px;
+				display: inline-block;
+				margin-right: 10px;
+				border-top: 2px solid white;
+				border-right: 1px solid white;
+				border-bottom: 1px solid white;
+				border-left: 2px solid white;
+				outline: 2px solid $lightGrey;
+ 				outline-offset: 0px;
+				
+				@include box-sizing-box();
+ 				@include transition(width, 0.3s, linear);
+				
+				&.current {
+					background: $darkGrey;
+					outline-color: $darkGrey;
+					width: 15px;
+				}
+				&.youtube {
+					position: relative;
+					background: white;
+					&:after {
+						content: " ";
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 7px 0 7px 10px;
+						border-color: transparent transparent transparent $lightGrey;
+						position: absolute;
+					  	top: 1px;
+  						left: 7px;
+
+  						@include transition(all, 0.3s, linear);
+					}
+					&.current {
+						background: $darkGrey;
+
+						&:after {
+							border-width: 5px 0 5px 5px;
+							border-color: transparent transparent transparent white;
+							top: 4px;
+							left: 4px;
+						}
+					}	
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+		}
+
+	
+
+		.pegi {
+			position: absolute;
+			left: 5px;
+			top: 5px;
+		}
+	}
+
+	section#pdpTitle {
+		background: $darkGrey;
+		margin: 0;
+		padding: 12px 10px 12px 5px;
+
+		h1 {
+			color: white;
+			margin: 0;
+			@include font-size(1.7);
+		}
+	}
+
+	section#pdpCTAs {
+		margin: 0;
+	  	padding: 10px 8px;
+		@include font-size(1.2);
+
+		.topInfo, .buttons, .bottomInfo {
+			overflow: hidden;
+		}
+
+		span {
+			display: block;
+		}
+
+		.topInfo {
+
+			.condition {
+				width: 50%;
+				color: $purple;
+				line-height: 11px;
+				float:left;
+				font-weight: bold;
+			  	margin: 0;
+			  	border: 0;
+		  		font-size: 12px;
+		  		background: none;
+			  	padding: 0;
+			}
+
+			.fulfilledByGame {
+				width: 60%;
+				float:left;
+				letter-spacing: 0.4px;
+
+				span {
+				  	display: inline-block;
+				  	width: 40px;
+			 	 	background-size: 100%;
+				  	background-repeat: no-repeat;
+				  	vertical-align: middle;
+				  	margin-left: -2px;
+				}
+			}
+
+			.price {
+
+			  	float: right;
+			  	font-weight: bold;
+			  	font-size: 25px;
+			  	line-height: 5px;
+			  	color: $purple;
+			  	@extend %openSans;
+
+			}
+			&.buttonsFixed {
+				margin-bottom: 49px;
+			}
+		}
+		
+		.buttons {
+
+			margin-top: 4px;
+
+			.addToWishlist {
+				margin-bottom: 0;
+				float:left;
+				background-position: center;
+				background-repeat: no-repeat;
+				text-indent: -9999px;
+				width: 15.666666667%;
+				height: 47px;
+
+				@extend %addToWishlistGrey;	
+			}
+
+			.addToBasket {
+				width: 83%;
+				float: right;
+				margin-bottom: 3px;
+			}
+
+			&.fixed {
+				position: fixed;
+				padding: 4px 5px 1px;
+				background: white;
+				top: 41px;
+				width: 100%;
+				left: 0;
+				z-index: 20;
+				@include transition(all, 0.3s, linear);
+				@include box-shadow(0px, 2px, 10px, rgba(0,0,0,0.2));
+				@include box-sizing-box();
+			}
+		}
+
+		.bottomInfo {
+
+			text-transform: uppercase;
+			font-weight: bold;
+			@include font-size(1.0);
+			@extend %openSans;
+			
+			.delivery {
+				float: left;
+				color: $lightGreyText;
+			}
+
+			.rewardPoints {
+				float: right;
+			}
+
+		}
+	}
+
+	section#pdpMoreOffersCTA {
+		overflow: hidden;
+		padding: 11px 10px;
+
+		h2 {
+			float: left;
+			width: 36%;
+			border: none;
+			padding: 0;
+			margin: 4px 0 0 0;
+			font-weight: normal;
+		  	letter-spacing: 0.5px;
+		  	text-transform: none;
+		  	background: none;
+
+			@extend %helvetica;
+			@include font-size(1.2);
+
+			.otherOffersPrice {
+				display: block;
+				font-weight: bold;
+				color: $purple;
+			}
+		}
+		a {
+			border: 1px solid $borderGrey;
+		  	text-transform: uppercase;
+		  	color: $lightGreyText;
+	 	 	float: right;
+		  	padding: 11px 0px;
+		  	background-repeat: no-repeat;
+		  	background-position: calc(50% + 65px);
+		  	width: 56%;
+		  	text-align: center;
+		  	padding-right: 22px;
+		  	font-weight: bold;
+		  	text-decoration: none;
+		  	letter-spacing: 0.2px;
+
+		  	@include box-sizing-box();
+			@extend %greyArrowSmall;
+			@extend %openSans;
+		}
+	}
+
+	section#pdpDelivery {
+		h3 {
+		  	margin: 13px 10px 0 12px;
+			font-weight: bold;
+			border-bottom: 2px solid $borderGrey;
+  			padding-bottom: 12px;
+			@extend %helvetica;
+			@include font-size(1.2);
+		}
+		.rows {
+			margin: 0 10px;
+			.row {
+				overflow: hidden;
+				padding: 16px 0 16px 13%;
+				border-bottom: 1px solid $borderGrey;
+				background-repeat: no-repeat;
+				background-position: left;
+		
+				h3, .info {
+					float: left;
+					width: 60%;
+				}
+
+				h3 {
+					margin-bottom: 5px;
+					font-weight: normal;
+					border: none;
+					padding: 0;
+					margin: 0;
+					@include font-size(1.2);
+				} 
+				.price {
+					float: right;
+					width: 15%;
+					text-align: right;
+					font-weight: bold;
+					color: $purple;
+
+					@include font-size(1.2);
+					@extend %openSans;
+				}
+				&.delivery{
+					background-size: 21px 12px;
+					@extend %deliveryIcon;
+				}
+
+				&.deliveryPlus {
+					padding: 14px 0 13px 13%;
+					background-size: 27px 18px;
+					background-position: left 8px;
+					@extend %deliveryPlusIcon;
+
+				}
+
+				&.storeCollection {
+					padding: 13px 0 17px 13%;
+					background-size: 19px 16px;
+					background-position: 2px 17px;
+					@extend %storeCollectionIcon;
+					.info {
+						width: 69%;
+					}
+					h3 {
+						margin-bottom: 2px;
+					}
+				}
+
+				&.storeCollectionPlus {
+					padding-bottom: 16px;
+					background-size: 24px 17px;
+  					background-position: 2px 18px;
+
+					@extend %storeCollectionPlusIcon;
+				}
+
+				&.international {
+					border: none;
+					background-size: 19px 19px;
+					background-position: left 16px;
+					padding-bottom: 22px;
+					@extend %internationalIcon;
+					.info {
+						width: 76%;
+					}
+				}
+				
+			}
+		}
+	}
+
+	
+
+	section#pdpDescription {
+		.content.main {
+			padding: 12px;
+			div.content {
+				.inner {
+					padding-top: 10px;
+					max-height: 250px;
+					overflow-y: scroll;
+				}
+				padding: 10px 0;
+				position: relative;
+				&:before, &:after {
+					content: " ";
+					display: block;
+					width: 100%;
+					height: 20px;
+					left: 0;
+					position: absolute;
+				}
+
+				&:before {
+					top: 10px;
+					@include verticalTopToBottomGradient();
+				}
+
+				&:after {
+					bottom: 10px;
+					@include verticalBottomToTopGradient();
+				}
+			}
+			.collapsible {
+				line-height: 17px;
+				h3 {
+					border-top: 1px solid $borderGrey;
+					padding-top: 11px;
+		  			margin-top: 9px;
+					
+					@include font-size(1.8);
+				}
+				p {
+					padding-right: 15px;
+				}
+				ul {
+
+					list-style: disc;
+					padding: 10px 0 10px 20px;
+				}
+				li {
+					margin-bottom: 10px;
+				}
+				
+				
+			}
+		}
+		&.package {
+			h3.trigger {
+				overflow: hidden;
+				position: relative;
+				img {
+					float: left;
+				}
+				span {
+					display: block;
+				}
+				.pegi {
+					float: right;
+				}
+				.text {
+					float: left;
+					width: 65%;
+					margin-left: 16px;
+				}
+				&:after {
+					position: absolute;
+					right: 0;
+					bottom: 10px;
+				}
+			}
+			.main {
+				
+			}
+			
+		}
+	}	
+
+	section#pdpMarketplace {
+
+		p {
+			padding: 10px 24px 9px 10px;
+		}
+
+		#marketplaceNavigation {
+			position: relative;
+			z-index: 2;
+			display: table;
+			border-top: 2px solid $backgroundGrey;
+			border-right: 2px solid $backgroundGrey;
+			border-left: 2px solid $backgroundGrey;
+			width: 92%;
+ 		 	margin: 0px auto 0px auto;
+
+			a {
+				display: table-cell;
+				width: 33%;
+				border-right: 1px solid white;
+				padding: 11px 0;
+				color: $darkGrey;
+				background-color: $backgroundGrey;
+				text-transform: uppercase;
+				font-weight: bold;
+				text-align: center;
+				text-decoration: none;
+				@extend %openSans;
+				@include transition(all, 0.3s, linear);
+				&.selected {
+					background-color: white;
+				}
+				&:last-child {
+					border-right: none;
+				}
+			}
+		}
+		#marketplaceTableInfo {
+			padding: 11px 12px 8px 12px;
+			margin-top: -2px;
+			border-top: 2px solid $backgroundGrey;
+			position: relative;
+			z-index: 1;
+		}
+		#marketplaceTableInfo {
+			font-weight: bold;
+			@include font-size(1.2);
+			.sortType {
+				font-weight: normal;
+			}
+		}
+		#marketplaceItemsList {
+			width: 100%;
+			border-collapse: collapse;
+			
+			.marketplaceItem {
+				margin: 0 10px;
+				overflow: hidden;
+				padding-top: 0px;
+				border-top: 2px solid $lightGrey;
+
+
+				.vendorLogo, .details, .price {
+					float: left;
+					text-align: center;
+					padding-top: 12px;
+					margin-bottom: 12px;
+				}
+
+				.vendorLogo {
+					width: 25%;
+					text-align: center;
+					img {
+					}
+				}
+
+				.details {
+					width: 50%;
+					text-align: left;
+
+					span {
+						display: block;
+						margin-top: 2px;
+					}
+
+					.condition {
+						font-weight: bold;
+						margin-bottom: 5px;
+						text-transform: uppercase;
+						color: $purple;
+						line-height: 7px;
+						margin-bottom: 12px;
+						@extend %openSans;
+						@include font-size(1.5);
+					}
+					.sellerDetails {
+						font-weight: bold;
+  						margin-top: 10px;
+  						display: block;
+  						color: $darkGrey;
+  						@include font-size(1.4);
+					}
+					.soldBy {
+						span {
+							display: inline;
+							font-weight: bold;
+						}
+					}
+
+					
+				}
+
+
+				.price {
+					width: 25%;
+					font-weight: bold;
+					text-align: right;
+					font-weight: bold;
+					color: $purple;
+					float: right;
+					@include font-size(1.5);
+				}
+				.button {
+					margin-top: 10px;
+					background-size: 20px;
+				  	width: 47%;
+  					float: right;
+					background-position: 82%;
+					@include font-size(1.2);
+				}
+				&:first-child {
+					.price {
+						@include font-size(2.1);
+					}
+				}
+			}
+			#sellerDetails {
+				padding: 10px;
+				div {
+					overflow: hidden;
+					margin-bottom: 10px;
+					.key {
+						float: left;
+					}
+					.value {
+						float: right;
+					}
+				}
+			}
+		}
+
+		#marketplacePagination {
+			overflow: hidden;
+			padding: 10px;
+			a {
+				width: 70px;
+				padding: 10px 0;
+				display: block;
+				border: 1px solid $borderGrey;
+				font-weight: bold;
+				text-align: center;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: $darkGrey;
+				background-repeat: no-repeat;
+				background-size: 10px;
+				@extend %openSans;
+				@include box-sizing-box();
+				&.prev {
+					float: left;
+					background-position: 10px center;
+					padding-left: 20px;
+					@extend %arrowBlackLeft;
+				}
+				&.next {
+					float: right;
+					background-position: calc(100% - 10px) center;
+					padding-right: 20px;
+					@extend %arrowBlackRight;
+				}
+				&.unactive {
+					opacity: 0.7;
+					pointer-events: none;
+				}
+			}
+			.info {
+				float: left;
+			  	line-height: 34px;
+				text-align: center;
+				width: calc(100% - 149px);
+			}
+		}
+	}
+
+	section#pdpGameCare {
+		h3 {
+			border-bottom: 1px solid $borderGrey;
+			padding: 6px 0 11px 0;
+			margin: 0 10px 5px 10px;
+		
+			@include font-size(1.8);
+			.price {
+				float: right;
+				color: $purple;
+			}
+		}		
+	}
+	
+
+	section#pdpWarranties {
+		.warranty {
+			border-top: 2px solid $backgroundGrey;
+			border-bottom: 2px solid $backgroundGrey;
+			h3 {
+				padding: 10px 0 10px 10px;
+				font-weight: normal;
+				@extend %helvetica;
+			}
+		}
+		.discCare {
+			p {
+				padding: 4px 10px 1px 10px;
+			}
+			.steps {
+				margin:0 10px;
+				padding-bottom: 12px;
+				.step {
+					padding: 10px 0px 3px 37px;
+					background-repeat: no-repeat;
+					background-position: left 14px;
+					line-height: 15px;
+					span {
+						display: block;
+						font-weight: bold;
+						margin-bottom: 2px;
+					}
+					&.step1 {
+						@extend %discCareStep1;
+					}
+					&.step2 {
+						background-position: 5px 14px;
+						@extend %discCareStep2;
+					}
+				}
+			}
+		}	
+	}
+
+	
+	section#pdpPackageHeader {
+		border:none;
+		margin: 0;
+		padding: 9px 0 14px 10px;
+		background: $darkGrey;
+		color: white;
+		h1 {
+			padding-right: 15px;
+			@include font-size(1.8);
+			span {
+				display: block;
+				@include transition(all, 0.3s, linear);
+				&.current {
+					margin-left: 10px;
+					
+				}
+				&:before {
+					content: "+";
+					font-weight: bold;
+					display: inline-block;
+					vertical-align: middle;
+					@include font-size(1.5);
+					@extend %helvetica;
+				}
+				&.first {
+					margin-bottom: 10px;
+					@include font-size(2.2);
+					&:before {
+						display: none;
+					}
+					
+				}
+				
+				
+			}
+		}
+	}
+
+
+	#pdpSpecialFeature {
+		.content{
+			padding: 10px;
+			line-height: 16px;
+		}
+		img {
+			width: 100%;
+		}
+	}
+}

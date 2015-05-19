@@ -1,0 +1,48 @@
+#manualAddressEntry {
+	overflow: hidden;
+	margin: 0 0 15px;
+	padding: 10px 14px;
+	font-weight: bold;
+	background: $white;
+
+	strong {
+		display: block;
+		margin: 0 0 6px;
+		@include font-size(1.2);
+	}
+
+	#manualAddressDetails {
+		margin: 10px 0 0;
+		padding: 10px 0 0;
+		border-top: 2px solid $backgroundGrey;
+
+		label {
+			display: none;
+		}
+
+		select {
+			width: 100%;
+			margin: 10px 0;
+			@extend %select;
+			background-position: 95% center;
+		}
+
+		input[type="text"], input[type="password"]  {
+			width: 100%;
+			margin: 0 0 10px;
+			@extend %input;
+		}
+
+		input[type="submit"] {
+			width: 100%;
+			font-weight: bold;
+			
+			@extend %primaryButton;
+			@extend %arrowButton;
+		}
+		.errorMessage {
+			display: block;
+		}
+	}
+
+}

@@ -1,0 +1,73 @@
+#productRecs {
+	position: relative;
+	.productRecs {
+		height: 150px;
+		position: relative;
+		background-color: white;
+		.productRec {
+
+			top: 16px;
+			left: 100%;
+			img {
+				width: 85px;
+				float: left;
+				margin-right: 10px;
+			}
+
+			.info {
+				float: left;
+				width: calc(100% - 95px);
+				h3 {
+					@include font-size(1.8);
+					&.longTitle {
+						@include font-size(1.4);
+					}
+				}
+
+				.icons {
+					display: block;
+					padding: 10px 0;
+					border-top: 1px solid $borderGrey;
+					border-bottom: 1px solid $borderGrey;
+					padding: 7px 0 5px;
+					margin: 8px 0 5px 0;
+					.icon {
+						width: 65px;
+						height: 15px;
+						font-size: 0;
+						&.console {
+
+							@extend %gameIcons;
+							&:after{
+								@include font-size(1.8);
+							}
+						}
+					}
+					.condition {
+						float: right;
+						text-transform: uppercase;
+						font-weight: bold;
+						margin-top: 4px;
+						@extend %openSans;
+
+					}
+
+				}
+				
+
+				.price {
+					display: block;
+					font-weight: bold;
+					color: $purple;
+
+					@include font-size(2.5);
+					@extend %openSans;
+				}
+			}
+
+
+			@extend %sliderItem;
+
+		}
+	}
+}

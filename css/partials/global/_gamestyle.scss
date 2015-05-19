@@ -1,0 +1,282 @@
+%unfoldingPanel {
+ 	-webkit-transition: 0.2s linear 0s;
+ 	-moz-transition: 0.2s linear 0s;
+    -o-transition: 0.2s linear 0s;
+	transition: 0.2s linear 0s;
+	-webkit-transform-origin: 50% 0%;
+  	-o-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+	-webkit-transform: perspective(350px) rotateX(-90deg);
+	-o-transform: perspective(350px) rotateX(-90deg);
+	transform: perspective(350px) rotateX(-90deg);
+
+	&.opened {
+		-webkit-transform: perspective(350px) rotateX(0deg);
+	 	-o-transform: perspective(350px) rotateX(0deg);
+		transform: perspective(350px) rotateX(0deg);
+	}
+}
+
+%gameIcons {
+
+	&:after {
+		font-family: "gamenav2014";
+	}
+
+	&.PlayStation4:after, &.PS4:after {
+		content: "1";
+	}
+
+	&.PlayStation3:after, &.PS3:after {
+		content: "2";
+	}
+	
+	&.XboxOne:after, &.XBOXONE:after {
+		content: "3";
+	}
+
+	&.Xbox360:after, &.XBOX360:after {
+		content: "4";
+	}
+
+	&.WiiU:after, &.WIIU:after {
+		content: "5";
+	}
+
+	&.i3DS:after, &.I3DS:after {
+		content: "6";
+	}
+
+	&.PSVita:after, &.PSVITA:after {
+		content: "7";
+	}
+
+	&.PC:after, &.PC:after {
+		content: "8";
+	}
+}
+
+%sliderItem {
+	width: 73.5%;
+	overflow: hidden;
+	position: absolute;
+	visibility: hidden;
+	@include scale(.8);
+	@include transition(all, 0.3s, linear);
+	&.focused {
+		left: 13.25%;
+		visibility: visible;
+		@include scale(1);
+	}
+
+	&.next {
+		left: 87%;
+		z-index: 2;
+		visibility: visible;
+	}
+
+	&.prev {
+		left: -60%;
+		visibility: visible;
+	}
+}
+
+.pegi {
+	width: 25px;
+	height: 31px;
+	display: inline-block;
+	background-size: 125px;
+	@extend %pegiStripe;
+
+	&.pegi3 {
+		background-position: 0px 0;
+	}
+	&.pegi7 {
+		background-position: -100% 0;
+	}
+	&.pegi12 {
+		background-position: -75%;
+	}
+	&.pegi16 {
+		background-position: -50% 0;
+	}
+	/* TODO find icon for pegi 15 and include into stripe */
+	&.pegi18 {
+		background-position: 100% 0;
+	}
+}
+.icon {
+	display: inline-block;
+	background-size: 100%;
+	background-repeat: no-repeat;
+
+	&.download {
+		width: 14px;
+		height: 17px;
+		@extend %downloadIcon;
+	}
+	&.console {
+
+		&.xboxOne {
+			@extend %xboxOne;
+		}
+	}
+}
+.ratingStars {
+	display: inline-block;
+	background-size: 100%;
+	background-repeat: repeat-y;
+	@extend %ratingStars;
+	&.rating05 {
+		background-position: 0 10%;
+	}
+	&.rating10 {
+		background-position: 0 20%;
+	}
+	&.rating15 {
+		background-position: 0 30%;
+	}
+	&.rating20 {
+		background-position: 0 40%;
+	}
+	&.rating25 {
+		background-position: 0 50%;
+	}
+	&.rating30 {
+		background-position: 0 60%;
+	}
+	&.rating35 {
+		background-position: 0 70%;
+	}
+	&.rating40 {
+		background-position: 0 80%;
+	}
+	&.rating45 {
+		background-position: 0 90%;
+	}
+	&.rating50 {
+		background-position: 0 100%;
+	}
+
+
+}
+
+.gameLogo {
+	vertical-align: bottom;
+	background-size: 100%;
+	background-repeat: no-repeat;
+
+	&.small {
+		width: 55px;
+		height: 16px;
+		display: inline-block;
+		text-indent: -4000px;
+		@extend %logoSmall;
+	}
+}
+
+.button {
+	display: block;
+	margin: 0 0 10px;
+	padding: 14px 0 14px 0;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-color: $lightPurple;
+	background-repeat: no-repeat;
+	@extend %openSans;
+	@include font-size(1.8);
+	@include box-sizing-box();
+
+	&.withIcon {
+		padding-right: 35px;
+		background-repeat: no-repeat;
+		background-position: 79% 8px;
+	}
+
+	&.addToBasket {
+		@extend %addToBasket;
+	}
+
+	&.addToWishlist {
+		@extend %borderedButton;
+		@extend %addToWishlistGrey;
+	}
+
+
+}
+.backButton {
+	
+  	color: white;
+  	display: block;
+  	text-decoration: none;
+  	padding: 12px 0 12px 40px;
+  	font-weight: bold;
+  	background-repeat: no-repeat;
+  	background-position: 10px;
+  	background-color: $darkGrey;
+  	
+  	@include font-size(1.8);
+  	@extend %arrowWhiteLeft;
+}
+.collapsible {
+	>.trigger {
+		cursor: pointer;
+	}
+	>.trigger:after {
+		content: " ";
+		display: block;
+		float: right;
+	 	margin: 6px 10px 0px 0px;
+		width: 10px;
+		height: 6px;
+		@extend %greyFilledArrow;
+		@include rotate(0);
+		@include transition(transform, 0.6s, linear);
+	}
+
+	>.content {
+		overflow: hidden;
+
+		.trigger:after {
+			margin-right: 0;
+		}
+	}
+
+	&.collapsed {
+
+		>.trigger {
+			@include transition(all, 0.6s, linear);
+
+			&:after {
+				@include rotate(180);
+			}
+		}
+
+		>.content {
+			display: none;
+		}
+	}
+}
+
+%bracketed {
+
+	&:after {
+		content: ")";
+	}
+	
+	&:before {
+		content: "(";
+	}
+}
+
+%greyTitle {
+	overflow: hidden;
+  	padding: 10px 0 9px 10px;
+	text-transform: uppercase;
+	border-bottom: 2px solid $backgroundGrey;
+	@include font-size(1.8);
+	@include greyGradient();
+}

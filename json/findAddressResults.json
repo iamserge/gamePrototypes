@@ -1,0 +1,16 @@
+{
+	"results": [
+		{
+			"AddressLineValue": "A",
+			"AddressLineText": "Address line 001"
+		},
+		{
+			"AddressLineValue": "B",
+			"AddressLineText": "Address line 002"
+		},
+		{
+			"AddressLineValue": "C",
+			"AddressLineText": "Address line 003"
+		}
+	]
+}

@@ -1,0 +1,143 @@
+#yourDetailsForm {
+	section {
+		overflow: hidden;
+		margin: 0 4px 15px;
+		padding: 10px 10px;
+		background: $white;
+	}
+	#yourDetailsEntry {
+		
+
+		label {
+			display: none;
+		}
+
+		select {
+			width: 50%;
+			float: left;
+			clear: left;
+			margin: 10px 0;
+			@extend %select;
+		}
+
+		input {
+			width: 100%;
+			margin: 0 0 10px;
+		
+		}
+	}
+	#enterPassword {
+		background-color: $lightPurple;
+		background-repeat: no-repeat;
+		background-position: top right;
+		background-size: 50px 50px;
+		
+		@extend %optional;
+
+		h2 {
+			background-repeat: no-repeat;
+			background-size: 28px 38px;
+			padding: 0 18px 0 32px;
+			color: white;
+			text-transform: uppercase;
+
+			@include font-size(1.8);
+			@extend %registerPasswordTitle;
+		}
+		input {
+			background-color: $purple2;
+			color: $lightPurple;
+			padding: 10px;
+			margin: 10px 0;
+			border: none;
+			width: 100%;
+			box-shadow: none;
+			@include box-sizing-box();
+			&::-webkit-input-placeholder {
+				color: $lightPurple;
+			}
+			&:-moz-placeholder { 
+				color: $lightPurple;
+			}
+			&::-moz-placeholder { 
+				color: $lightPurple;			
+			}
+			&:-ms-input-placeholder {
+				color: $lightPurple;
+			}
+		}
+		.errorMessage {
+			padding-left: 20px;
+			display: block;
+			background-repeat: no-repeat;
+			background-size: 14px 14px;
+		  	background-position: left;
+		  	color: white;
+		  	margin: 0;
+			@extend %info;
+			@include font-size(1.1);
+		}
+
+	}
+	#existingRewardCardUsers {
+		h2 {
+			margin: 10px 0 5px 0;
+		}
+		p {
+			strong {
+				font-weight: bold;
+			}
+			span {
+				font-weight: bold;
+				color: $lightPurple;
+			}
+			&#noCardNumberNote {
+				
+				padding-left: 30px;
+				line-height: 16px;
+				margin-top: 10px;
+				background-repeat: no-repeat;
+				background-position: left;
+				background-size: 18px 12px;
+				@extend %mail;
+			}
+		}
+		input {
+			margin: 10px 0 0;
+		}
+	}
+	
+	#ageConfirmAndContinue {
+		p {
+			margin: 10px 0;
+		  	line-height: 16px;
+			span {
+			  	margin: 0 6px 0 0;
+				float: left;
+			}
+		}
+		select {
+			font-weight: normal;
+			width: 100%;
+		  	background-position: 94% center;
+			@extend %select;
+		}
+		input[type="submit"] {
+			display: inline-block;
+			width: 100%;
+			margin: 10px 0;
+			@extend %primaryButton;
+			@extend %arrowButton;
+		}
+	}
+	.errorMessage {
+		display: block;
+		&[data-for="nameTitle"] {
+			width: 60%;
+			float: left;
+		}
+		&[data-for="age"] {
+			margin: 10px 0 0;
+		}
+	}
+}

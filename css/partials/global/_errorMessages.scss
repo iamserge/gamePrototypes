@@ -1,0 +1,30 @@
+.errorInput {
+	border: 1px solid $red !important;
+}
+
+.errorMessage {
+	color: $red;
+	margin: 0 0 10px;
+}
+
+#errorSummary {
+  	background: white;
+
+  	h2 {
+		color: #C03131;
+  		padding: 10px 0 0px 10px;
+		text-transform: uppercase;
+	}
+	ul {
+		padding: 10px; 
+		li {
+  			line-height: 16px;
+		}
+	}
+}
+
+p.error {
+	background: $darkRed;
+  	color: #fff;
+  	padding: 10px;
+}

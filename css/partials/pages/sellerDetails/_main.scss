@@ -1,0 +1,225 @@
+body#sellerDetails {
+	
+
+	section.mainSection {
+		margin: 8px 5px;
+
+		background: white;
+
+		p {
+			@include font-size(1.2);
+			line-height: 18px;
+
+		}
+		.content {
+			padding: 10px 14px;
+		}
+	}
+
+	section h2.trigger, .greyTitle {
+		@extend %greyTitle;
+	}
+	p {
+		&.collapsed {
+			height: 80px;
+			overflow-y: hidden;
+			position: relative;
+			&:after {
+				content: "READ MORE";
+				position: absolute;
+				display: block;
+				height: 35px;
+				line-height: 34px;
+				width: 100%;
+				bottom: 0;
+				text-align: center;
+				background: rgba(255,255,255,0.9);
+				font-weight: bold;
+				@extend %openSans;
+				@include font-size(1.4);
+				
+			}
+		}
+		
+	}
+	#subHeader {
+		padding-top: 1px;
+		.button {
+			margin-top: 10px;
+			background-color: $darkGrey;
+			background-position: 10px;
+			@extend %arrowWhiteLeft;
+		}
+		
+	}
+	#sellerDetailsInfo {
+		.header {
+			overflow: hidden;
+			padding: 0px 0 10px 0;
+			margin-bottom: 12px;
+			border-bottom: 1px solid $borderGrey;
+		}
+		img {
+			float: left;
+		}
+		.header h2 {
+			padding: 6px 0px 6px 0;
+			margin-left: 12px;
+			float: left;
+			width: 60%;
+
+			@include font-size(2.0);
+
+		}
+		.rating {
+			margin-left: 12px;
+			float: left;
+		}
+		.ratingStars {
+			width: 100px;
+			height: 17px;
+			vertical-align: middle;
+		}
+		.about {
+			h3 {
+				margin: 10px 0;
+				@include font-size(1.6);
+			}
+		}
+	}
+
+	#sellerFeedback {
+		h2 {
+			.ratingStars {
+				width: 100px;
+				height: 17px;
+				margin-left: 12px;
+			}
+			.amountOfReviews {
+				position: relative;
+				top: -3px;
+  				left: 4px;
+  				@include font-size(1.2);
+				@extend %helvetica;
+			}
+		}
+		.reviewsPagination {
+			overflow: hidden;
+			a {
+				width: 70px;
+				padding: 10px 0;
+				display: block;
+				border: 1px solid $borderGrey;
+				font-weight: bold;
+				text-align: center;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: $darkGrey;
+				background-repeat: no-repeat;
+				background-size: 10px;
+				@extend %openSans;
+				@include box-sizing-box();
+				&.prev {
+					float: left;
+					background-position: 10px center;
+					padding-left: 20px;
+					@extend %arrowBlackLeft;
+				}
+				&.next {
+					float: right;
+					background-position: calc(100% - 10px) center;
+					padding-right: 20px;
+					@extend %arrowBlackRight;
+				}
+				&.unactive {
+					opacity: 0.7;
+					pointer-events: none;
+				}
+			}
+			.info {
+				float: left;
+			  	line-height: 34px;
+				text-align: center;
+				width: calc(100% - 149px);
+			}
+			&:first-child {
+				padding-bottom: 12px;
+				border-bottom: 1px solid $backgroundGrey;
+
+			}
+			&:last-child {
+				padding-top: 12px;
+				border-top: 1px solid $backgroundGrey;
+			}
+		}
+		.reviews {
+			
+		}
+		.review {
+			border-bottom: 2px solid $borderGrey;
+  			padding-bottom: 10px;
+			.ratingStars {
+				width: 80px;
+				height: 15px;
+				float: right;
+			}
+
+			h3 {
+				margin: 10px 0;
+				@include font-size(1.8);
+			}
+			.ticks {
+				margin-top: 10px;
+				span {
+					display: block;
+					border-top: 1px solid $borderGrey;
+					padding: 7px 0 6px 0;
+					font-weight: bold;
+
+					&:before {
+						background-repeat: no-repeat;
+						content: " ";
+						display: inline-block;
+						width: 16px;
+						height: 13px;
+						margin-right: 10px;
+						vertical-align: middle;
+						@extend %yesNoReview;
+					}
+					
+					
+					&.false:before {
+						background-position: 0 -13px;
+					} 
+				}
+			}
+
+			&:last-child {
+				border: none;
+			}
+		}
+	}
+
+
+	#sellerDeliveryInfo {
+		table {
+			border: 1px solid $borderGrey;
+			border-collapse: collapse;
+			tr {
+
+			}
+			th {
+				font-weight: bold;
+			}
+			td, th {
+				padding: 10px 15px;
+				text-align: left;
+				border: 1px solid $borderGrey;
+			}
+		}
+	}
+
+	.button {
+		margin: 0 5px 10px 5px;
+	}
+}

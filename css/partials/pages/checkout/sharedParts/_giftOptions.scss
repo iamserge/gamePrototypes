@@ -1,0 +1,10 @@
+#giftOptions {
+	background-repeat: no-repeat;
+  	background-size: 30px;
+	background-position: 11px center;
+	padding-left: 55px;
+	@extend %giftVoucher;
+	.sendAsGiftContainer {
+		@extend %checkboxBox;
+	}
+}

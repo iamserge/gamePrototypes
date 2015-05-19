@@ -1,0 +1,41 @@
+html {
+	font-size: 62.5%;
+	color: $darkGrey;
+}
+
+body {
+   background-color: $backgroundGrey;
+   @extend %helvetica;
+   @include font-size(1.2);
+}
+
+h1, h2, h3, h4, h5 {
+	@extend %openSans;
+	font-weight: bold;
+}
+
+main {
+	margin: 45px 0 0;
+	background: $backgroundGrey;
+	position: relative;
+	left: 0;
+	
+
+	h1 {
+		margin: 10px 0;
+		@include font-size(2.6);
+	}
+
+	h2 {
+		font-weight: bold;
+		@include font-size(1.6);
+	}
+
+	&.hidden {
+		left: -100%;
+	}
+	&.unfocused {
+		opacity: 0.4;
+		//@include blur(2px);
+	}
+}

@@ -1,0 +1,184 @@
+{
+    "points": [
+        {
+            "address": "Unit 1, Canada Square, Canary Wharf, London, E14 5AZ",
+            "submitAddress": "Unit 1, Canada Square:Canary Wharf::London::E14 5AZ                                 :GB:614",
+            "shopName": "London (Canary Wharf)",
+            "distance": 0.7,
+            "latitude": 51.50495,
+            "longitude": -0.01945,
+            "times": [
+                "Mon 9.00 - 7.00",
+                "Tue 9.00 - 7.00",
+                "Wed 9.00 - 7.00",
+                "Thu 9.00 - 8.00",
+                "Fri 9.00 - 8.00",
+                "Sat 10.00 - 6.00",
+                "Sun 12.00 - 6.00"
+            ],
+            "type": "game"
+        },
+        {
+            "address": "71 High Street, Eltham, SE9 1TD",
+            "submitAddress": "71 High Street:::Eltham:Middlesex:SE9 1TD                                 :GB:3222",
+            "shopName": "ELTHAM",
+            "distance": 4.2,
+            "latitude": 51.45091,
+            "longitude": 0.05364,
+            "times": [
+                "Mon 9.00 - 17.30",
+                "Tue 9.00 - 17.30",
+                "Wed 9.00 - 17.30",
+                "Thu 9.00 - 17.30",
+                "Fri 9.00 - 17.30",
+                "Sat 9.00 - 17.30",
+                "Sun 10.00 - 16.00"
+            ],
+            "type": "collectionPlus"
+        },
+        {
+            "address": "34 The Mall, Shopping City, Wood Green, N22 6YQ",
+            "submitAddress": "34 The Mall:Shopping City::Wood Green::N22 6YQ                                 :GB:652",
+            "shopName": "Wood Green",
+            "distance": 8,
+            "latitude": 51.59453,
+            "longitude": -0.10855,
+            "times": [
+                "Mon 9.30 - 6.00",
+                "Tue 9.30 - 6.00",
+                "Wed 9.30 - 6.00",
+                "Thu 9.30 - 6.00",
+                "Fri 9.30 - 6.00",
+                "Sat 9.30 - 6.00",
+                "Sun 11.00 - 5.00"
+            ],
+            "type": "collectionPlus"
+        },
+        {
+            "address": "84 High Street, Sutton, SM1 1EX",
+            "submitAddress": "84 High Street:::Sutton:Surrey:SM1 1EX                                 :GB:176",
+            "shopName": "Sutton",
+            "distance": 12,
+            "latitude": 51.36245,
+            "longitude": -0.19234,
+            "times": [
+                "Mon 9.00 - 6.00",
+                "Tue 9.00 - 6.00",
+                "Wed 9.00 - 6.00",
+                "Thu 9.00 - 7.00",
+                "Fri 9.00 - 6.00",
+                "Sat 9.00 - 6.00",
+                "Sun 10.30 - 4.30"
+            ],
+            "type": "collectionPlus"
+        },
+        {
+            "address": "Unit A2A Lakeside Retail Park, Grays, West Thurrock, RM20 1WN",
+            "submitAddress": "Unit A2A Lakeside Retail Park:Grays::West Thurrock::RM20 1WN                                :GB:297",
+            "shopName": "Lakeside OOT",
+            "distance": 12.4,
+            "latitude": 51.48598,
+            "longitude": 0.276,
+            "times": [
+                "Mon 9.00 - 8.00",
+                "Tue 9.00 - 8.00",
+                "Wed 9.00 - 8.00",
+                "Thu 9.00 - 8.00",
+                "Fri 9.00 - 8.00",
+                "Sat 9.00 - 7.00",
+                "Sun 11.00 - 5.00"
+            ],
+            "type": "game"
+        },
+        {
+            "address": "Unit 10, 56 Broadway Centre, Ealing, W5 5JY",
+            "submitAddress": "Unit 10:56 Broadway Centre::Ealing:London:W5 5JY                                  :GB:45",
+            "shopName": "Ealing",
+            "distance": 12.6,
+            "latitude": 51.51278,
+            "longitude": -0.30299,
+            "times": [
+                "Mon 9.00 - 6.00",
+                "Tue 9.00 - 6.00",
+                "Wed 9.00 - 6.00",
+                "Thu 9.00 - 7.00",
+                "Fri 9.00 - 6.00",
+                "Sat 9.00 - 6.00",
+                "Sun 11.00 - 5.00"
+            ],
+            "type": "collectionPlus"
+        },
+        {
+            "address": "33 High Street, Brentwood, CM14 4RG",
+            "submitAddress": "33 High Street:::Brentwood:Essex:CM14 4RG                                :GB:674",
+            "shopName": "Brentwood",
+            "distance": 16.1,
+            "latitude": 51.62131,
+            "longitude": 0.30472,
+            "times": [
+                "Mon 9.00 - 5.30",
+                "Tue 9.00 - 5.30",
+                "Wed 9.00 - 5.30",
+                "Thu 9.00 - 5.30",
+                "Fri 9.00 - 5.30",
+                "Sat 9.00 - 5.30",
+                "Sun 10.00 - 4.00"
+            ],
+            "type": "collectionPlus"
+        },
+        {
+            "address": "Unit F1, jon, High Wycombe, UB3 3EX",
+            "submitAddress": "Unit F1:jon::High Wycombe:Buckinghamshire:UB3 3EX                                 :GB:1",
+            "shopName": "High Wycombe",
+            "distance": 17,
+            "latitude": 51.51669,
+            "longitude": -0.40551,
+            "times": [
+                "Mon 9.30 - 8.00",
+                "Tue 9.30 - 8.00",
+                "Wed 9.30 - 8.00",
+                "Thu 9.30 - 8.00",
+                "Fri 9.30 - 8.00",
+                "Sat 9.00 - 7.00",
+                "Sun 11.00 - 5.00"
+            ],
+            "type": "game"
+        },
+        {
+            "address": "84 Town Square, Basildon, SS14 1BJ",
+            "submitAddress": "84 Town Square:::Basildon:Essex:SS14 1BJ                                :GB:19",
+            "shopName": "Basildon",
+            "distance": 20.8,
+            "latitude": 51.56985,
+            "longitude": 0.45805,
+            "times": [
+                "Mon 9.00 - 5.30",
+                "Tue 9.00 - 5.30",
+                "Wed 9.00 - 5.30",
+                "Thu 9.00 - 5.30",
+                "Fri 9.00 - 5.30",
+                "Sat 9.00 - 5.30",
+                "Sun 10.00 - 4.00"
+            ],
+            "type": "game"
+        },
+        {
+            "address": "85 Broad Street, Town Centre, Reading, TW18 4WA",
+            "submitAddress": "85 Broad Street:Town Centre::Reading:Berkshire:TW18 4WA                                :GB:3350",
+            "shopName": "READING 2",
+            "distance": 21.9,
+            "latitude": 51.43719,
+            "longitude": -0.51326,
+            "times": [
+                "Mon 9.00 - 6.00",
+                "Tue 9.00 - 6.00",
+                "Wed 9.00 - 6.00",
+                "Thu 9.00 - 6.00",
+                "Fri 9.00 - 6.00",
+                "Sat 9.00 - 6.00",
+                "Sun 11.00 - 5.00"
+            ],
+            "type": "game"
+        }
+    ]
+}

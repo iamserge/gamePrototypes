@@ -1,0 +1,118 @@
+body#myAccount {
+	
+
+
+
+	main section.mainSection {
+		margin: 0 0 10px;
+		padding: 14px 12px 12px;
+		font-weight: bold;
+		line-height: 120%;
+		background-color: $white;
+
+	}
+	p {
+		font-weight: normal;
+	}
+	h1 {
+		height: 45px;
+		margin: 10px 0 0;
+		padding: 0 12px;
+		line-height: 46px;
+		color: $white;
+		font-weight: bold;
+		background: $darkGrey;
+		@include font-size(1.8);
+	}
+	input[type="text"], input[type="password"] {
+		width: 100%;
+		margin: 10px 0 0;
+		@extend %input;
+	}
+
+	input[type="submit"] {
+		
+		display: inline-block;
+		width: 100%;
+		margin: 10px 0;
+		@extend %primaryButton;
+		@extend %arrowButton;
+		&.secondary {
+			background-color: $darkGrey;
+			border-color: $darkGrey;
+		}
+	}
+
+	input[type="text"] ~ a, input[type="password"] ~ a  {
+		display: block;
+		margin-top: 10px;
+		text-decoration: none;
+		color: $darkGrey;
+		@include font-size(1.2);
+	}
+
+	button {
+		@extend %primaryButton;
+		display: inline-block;
+		width: 100%;
+		margin: 10px 0;
+		&.secondary {
+			background-color: $darkGrey;
+			border-color: $darkGrey;
+		}
+	}
+	.errorMessage {
+		margin: 6px 0 0 0;
+		display: block;
+	}
+	#registerLinkContainer {
+		h2 {
+			margin: 10px 0;
+		}
+		p {
+
+		}
+		input[type="submit"] {
+			background-color: $darkGrey;
+		}
+	}
+	#gameAccountBenefitsContainer {
+		ul {
+		  	list-style: disc;
+			li {
+				margin: 5px 0 0 12px;
+			}
+		}
+	}
+	.doubleButtonsContainer {
+		text-align: center;
+		margin: 20px 0;
+		a {
+			margin: 0;
+			width: 30%;
+			text-align: center;
+			display: inline-block;
+			@extend %secondaryButton;
+			&.active {
+				background-color: $darkGrey;
+				color: white;
+			}
+			&:last-child {
+				margin-left: -4px;
+			}
+		}
+	}
+
+	//Styles shared with checkout subheader
+	@import '../checkout/sharedParts/subHeader.scss';
+
+
+	@import '_login';
+	@import '_forgotPassword';
+	@import '_regsiterStep1';
+	@import '_registerStep2';
+	@import '_registerStep3';
+	@import '_registerStep4';
+	@import '_registerConfirmation';
+	
+}

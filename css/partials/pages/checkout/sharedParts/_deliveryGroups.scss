@@ -1,0 +1,52 @@
+section.mainSection.deliveryGroup {
+	overflow: hidden;
+	margin: 0 4px 10px;
+	background: $white;
+	padding-bottom: 10px;
+	h2 {
+		font-weight: bold;
+		padding: 10px 0 9px 0px;
+		@include font-size(1.8);
+		span {
+			float: right;
+			margin: 4px 0 0;
+			color: $purple;
+			@include font-size(1.2);
+		}
+	}
+
+	.fulfilment {
+		margin: 0 0 10px;
+		border-top: 1px solid $backgroundGrey;
+		border-bottom: 1px solid $backgroundGrey;
+		padding: 10px 0;
+		img {
+			max-width: 40px;
+			vertical-align: middle;
+		}
+	}
+
+	select {
+		width: 100%;
+		margin: 0 0 10px;
+		@extend %select;
+		background-position: 95% center;
+	}
+
+	.itemDetails {
+		padding: 10px 0 0;
+		border-top: 1px solid $backgroundGrey;
+
+		img {
+			float: left;
+			width: 21%;
+			margin: 0 10px 0 0;
+		}
+
+		h3 {
+			margin: 0 0 5px;
+			line-height: 120%;
+			@include font-size(1.5);
+		}
+	}
+}

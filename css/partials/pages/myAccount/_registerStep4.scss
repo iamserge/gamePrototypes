@@ -1,0 +1,18 @@
+#registerStep4Details {
+	h1 {
+		background: none;
+		color: $darkGrey;
+		padding: 0;
+		height: auto;
+		line-height: normal;
+		margin: 0 0 10px 0;
+	}
+
+	select {
+		width: 100%;
+		background-position: 95% center;
+		margin-bottom: 10px;
+		@extend %select;
+	}
+	
+}

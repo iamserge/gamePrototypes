@@ -1,0 +1,114 @@
+#basketSummary {
+	margin: 0 0 30px;
+	background: $white;
+
+	#summaryHeader {
+		position: relative;
+		height: 38px;
+		padding: 0 12px;
+		line-height: 38px;
+		border-bottom: 2px solid $backgroundGrey;
+		@include font-size(1.2);
+
+		strong {
+			font-weight: bold;
+		}
+
+		span {
+			position: absolute;
+			right: 12px;
+			color: $purple;
+			font-weight: bold;
+			@include font-size(1.8);
+		}
+	}
+
+	#summaryItems {
+		display: none;
+
+		li {
+			clear: left;
+			overflow: hidden;
+			padding: 9px;
+			border-bottom: 1px solid $backgroundGrey;
+
+			&:last-child {
+				border-bottom: 2px solid $backgroundGrey;
+			}
+
+			img {
+				width: 42px;
+				float: left;
+			}
+
+			.description {
+				float: left;
+				width: calc(100% - 52px);
+				margin: 0 0 0 6px;
+				color: $middleGrey;
+
+				h3 {
+					margin: 0 0 7px;
+					color: $darkGrey;
+					@include font-size(1.8);
+				}
+
+				div {
+					margin: 0 0 4px;
+				}
+
+				span {
+					padding: 0 5px 0 0;
+					font-weight: bold;
+					@extend %openSans;
+					&.price {
+						@extend %helvetica;
+						color: $purple;
+					}
+				}
+			}
+		}
+	}
+
+	#summarySlider {
+		position: relative;
+		height: 38px;
+		background-color: $white;
+		@extend %openSans;
+		span {
+			display: block;
+			width: 43%;
+			height: 36px;
+			line-height: 39px;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: $lightGrey;
+			@include font-size(1.2);
+
+			&:first-child {
+				float: left;
+				text-align: right;
+
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					left: calc(50% - 25px);
+					top: 5px;
+					width: 50px;
+					height: 50px;
+					border-radius: 30px;
+					background-color: $white;
+					background-repeat: no-repeat;
+					background-position: center 14px;
+					background-size: 18px 18px;
+					@extend %basketSummarySlider;
+				}
+			}
+
+			&:last-child {
+				float: right;
+			}
+		}
+	}
+}

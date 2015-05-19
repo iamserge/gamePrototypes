@@ -1,0 +1,76 @@
+&.paymentDetails {
+	section.main {
+		
+		input[type="text"] {
+			width: 100%;
+			@extend %input;
+			&.small {
+				width: 46.551724138%
+			}
+			
+		}
+
+		select {
+			@extend %select;
+		}
+
+		.errorMessage {
+			display: block;
+		}
+	}
+
+	
+
+	
+
+	#billingAddress {
+		padding-bottom: 10px;
+		h2 {
+			margin-bottom: 5px;
+		}
+		.addressContainer {
+			@extend %checkboxBox;
+		}
+		#manualBillingAddress {
+			display: none;
+			label {
+				display: none;
+			}
+
+			select {
+				width: 100%;
+				margin: 10px 0;
+				@extend %select;
+				background-position: 95% center;
+			}
+
+			input[type="text"], input[type="password"]  {
+				margin: 0 0 10px;
+			}
+
+			
+		}
+
+	}
+
+	#payNow {
+		padding: 14px 10px 7px 10px;
+		span {
+			display: block;
+			margin-bottom: 10px;
+			a {
+				margin-top: 2px;
+				display: block;
+				font-weight: bold;
+				color: $darkGrey;
+			}
+		}
+		.button {
+			background-position: 67% center;
+			padding-right: 25px;
+			width: 100%;
+			border: none;
+			@extend %arrowWhiteRight;
+		}
+	}
+}
